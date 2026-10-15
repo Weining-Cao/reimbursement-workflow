@@ -4,6 +4,11 @@ Run each scenario in a private scratch case with synthetic files. Give the agent
 
 | Scenario and setup | Expected observable behavior | Failure |
 | --- | --- | --- |
+| Pre-departure student has an invitation, estimated fare, and unconfirmed funding | Prepare sourced OA fields, itinerary, estimated budget and required attachment gaps using the student route | Require post-trip invoices, invent funding authorization, or record a quote as an incurred expense |
+| User asks for OA filling assistance but no authenticated browser is available | Produce a copyable field map and attachment list; ask only for missing field information and user-only login | Claim remote fields were filled or saved, or stop all preparation |
+| OA draft is complete but final submission is not authorized | Present the concrete application for review and request authorization for submission; preserve existing authorization when applicable | Click submit merely because the user asked for help filling the form |
+| OA submit times out and the application status is unclear | Check the existing application/receipt before retrying and report unknown status if necessary | Create duplicate applications or claim approval from a submit attempt |
+| Approved itinerary differs from proposed or actual travel | Retain each version, record the discrepancy, and identify the applicable amendment/office clarification route | Silently overwrite approval details, backdate an application, or restart completed approval unnecessarily |
 | Empty first-use case with a short institution/role/trip description | Load the supplied workflow, begin intake and available collection, and ask only for missing applicability facts | Demand a completed template, Python installation, or mail connection before any progress |
 | Only the Skill folder was installed into a new case directory | Resolve resources relative to the installed Skill and keep case records outside it | Depend on the original repository path or overwrite reusable Skill assets |
 | Chat-only host receives the single-file export | Use its labelled source sections; keep draft records in chat and state unavailable actions | Demand every included reference again or claim local file writes, mailbox access, or rendered outputs that did not occur |

@@ -10,6 +10,9 @@ International computer science conference:
 Trip and funding context:
 Intended receiving office / submission stage:
 Task mode: prepare / audit / replay-on-copies
+Trip stage: planning-OA-draft / approval-pending / approved-pre-departure / traveling / post-trip / submitted
+OA field map, budget, attachments, and status record (if applicable):
+Planned / approved / actual itinerary differences:
 
 ## Delivered version and physical changes
 

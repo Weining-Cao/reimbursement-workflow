@@ -1,4 +1,4 @@
 interface:
   display_name: "Nanjing University Conference Reimbursement"
-  short_description: "Prepare NJU international computer science conference claims"
-  default_prompt: "Use $reimbursement-workflow to prepare my Nanjing University reimbursement for an international computer science conference, collect missing materials, and check the packet against applicable university requirements."
+  short_description: "Assist NJU conference travel from OA draft to reimbursement"
+  default_prompt: "Use $reimbursement-workflow for my Nanjing University international computer science conference trip. Start at my current stage, helping with the pre-departure OA draft, itinerary, budget and attachments when needed, then continue through reimbursement preparation and review."

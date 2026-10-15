@@ -16,6 +16,7 @@ SOURCES = (
     SKILL / "references/collection.md",
     SKILL / "references/finance-review.md",
     SKILL / "assets/case.md",
+    SKILL / "assets/oa-draft.md",
     SKILL / "assets/expenses.csv",
     SKILL / "assets/review.md",
     SKILL / "references/replay.md",
@@ -32,7 +33,7 @@ def export(root, destination):
         "details can be discovered during intake. No installation is required.\n\n"
         "This file is generated from the maintained public sources listed below. "
         "It contains instructions, empty working templates, and an optional "
-        "freshness script; it contains no claimant evidence or institutional rules.\n\n"
+        "freshness script; it contains no claimant evidence and is not an official policy publication.\n\n"
         "For the agent: begin with the starter prompt and canonical workflow. "
         "Relative links refer to included SOURCE sections, resolved from the "
         "referencing source's directory; read those sections within this attachment "

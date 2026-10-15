@@ -2,7 +2,7 @@ NANJING UNIVERSITY INTERNATIONAL COMPUTER SCIENCE CONFERENCE REIMBURSEMENT — C
 
 Attach this file or paste its full contents into your agent, then describe your Nanjing University unit, traveler role, conference trip, and available materials. Unknown details can be discovered during intake. No installation is required.
 
-This file is generated from the maintained public sources listed below. It contains instructions, empty working templates, and an optional freshness script; it contains no claimant evidence or institutional rules.
+This file is generated from the maintained public sources listed below. It contains instructions, empty working templates, and an optional freshness script; it contains no claimant evidence and is not an official policy publication.
 
 For the agent: begin with the starter prompt and canonical workflow. Relative links refer to included SOURCE sections, resolved from the referencing source's directory; read those sections within this attachment rather than requesting separate files. The script section is source code, not an installed executable or evidence that it ran. Use only capabilities actually available in this chat. Missing filesystem, browser, mail, or rendering access must not be reported as completed actions.
 
@@ -13,6 +13,7 @@ skills/reimbursement-workflow/references/workflow.md
 skills/reimbursement-workflow/references/collection.md
 skills/reimbursement-workflow/references/finance-review.md
 skills/reimbursement-workflow/assets/case.md
+skills/reimbursement-workflow/assets/oa-draft.md
 skills/reimbursement-workflow/assets/expenses.csv
 skills/reimbursement-workflow/assets/review.md
 skills/reimbursement-workflow/references/replay.md
@@ -27,8 +28,8 @@ Use this after making the workflow available through a local Skill folder or the
 
 ```text
 Follow the supplied workflow to prepare Nanjing University reimbursement for
-attendance at an international computer science conference, with the goal of
-passing finance review without avoidable rework.
+attendance at an international computer science conference, starting with the
+pre-departure OA application if needed and continuing through finance review.
 Use the workflow from the supplied local SKILL.md (resolving references relative
 to that skill folder), or the included sections of START_CHAT.txt. If neither
 is available, tell me the missing workflow location instead of assuming it is
@@ -37,16 +38,23 @@ installed. Keep my case files separate from the workflow package.
 Institution: Nanjing University
 Unit and traveler role: [known context or unknown]
 International computer science conference: [name or unknown]
+Current stage: [planning/OA draft / awaiting approval / approved / traveling / post-trip / submitted]
 Trip, dates, destination, and funding program: [known context or unknown]
 Available files: [location or none yet]
 Rules and original template, if already available: [location or unknown]
 Latest user-edited Word file, if any: [location or none yet]
 Available browser/mailbox connections: [known connections or discover]
-Requested result: [complete preparation / collect missing items / review packet]
+Requested result: [OA field draft and budget / help fill OA / complete reimbursement preparation / collect missing items / review packet]
 Known paper-only materials: [list or unknown]
 Confirmed preferences and changes: [list or none]
 
 Inspect available materials and find the applicable official requirements.
+If I am applying before departure, prepare the OA field map, proposed itinerary,
+estimated budget and attachment list first. Keep estimates separate from actual
+expenses and leave unknown facts unresolved. Help with the visible portal only
+when the required tools and access are available. Preparing a draft does not
+authorize final submission; present the concrete application before that action
+unless I have already authorized it. Do not restart an already approved case.
 Identify missing items and actively help obtain them using available websites,
 authorized mailbox access, and local files. Guide me through user-only steps
 such as login, signatures, or paper pickup. Reuse permissions already granted;
@@ -68,12 +76,14 @@ Do not claim actual finance acceptance before receiving that outcome.
 
 ---
 name: reimbursement-workflow
-description: Prepare Nanjing University reimbursement for international computer science conferences. Collect missing materials, retrieve authorized invoice emails, fill the original form, and review the final PDF against applicable university requirements. Not an official policy or general accounting service.
+description: Assist Nanjing University international computer science conference travel from pre-departure OA application drafting, itinerary and budget preparation to invoice collection, reimbursement forms and final PDF review. Not an official approval service.
 ---
 
 # Nanjing University Conference Reimbursement
 
 Read [the canonical workflow](references/workflow.md) before handling case files. Follow the requested scope; resume from the current case state instead of restarting intake.
+
+For pre-departure work, use [oa-draft.md](assets/oa-draft.md) to prepare mapped fields, estimated budget, and attachments; assist with the actual portal only through available authorized tools. Keep draft, submitted, and approved states distinct. For post-trip work, use the reimbursement records below.
 
 Use [case.md](assets/case.md), [expenses.csv](assets/expenses.csv), and [review.md](assets/review.md) as working templates in the private case directory. Keep resources in this skill folder unchanged during case work.
 
@@ -95,6 +105,8 @@ Scope: Nanjing University travelers attending international conferences in compu
 
 Help a traveler get from incomplete materials to a packet that passes the institution's actual finance review without avoidable rework. Actively obtain what can be obtained, guide the user through steps only they can complete, and test the final packet against applicable requirements. File production is an intermediate step; first-pass acceptance is the outcome to measure, never a guarantee to invent. Use this document with any capable agent; no particular model or runtime is assumed.
 
+Support the whole trip lifecycle, starting with pre-departure OA application preparation. Identify the current stage: planning/OA draft, approval pending, approved/pre-departure, traveling, post-trip reimbursement, or already submitted. Resume at that stage; do not require post-trip invoices before drafting an application or restart an approved application merely to use this workflow.
+
 ## 1. Establish the case and acceptance criteria
 
 Resolve linked resources relative to the supplied skill folder; in a single-file chat export, use the included sections labelled with those source paths. Begin from the user's short trip description and available materials, even if the case folder is empty. Establish the smallest missing applicability facts while starting the case record and available collection work. Keep working records separate from the reusable package. If the host cannot write files, maintain the record and ledger in chat or supported downloadable artifacts and say where they actually exist. State the relevant tool limitations and next concrete action; do not make completing a questionnaire, installing Python, or connecting mail a prerequisite to intake.
@@ -108,6 +120,18 @@ The user does not need to arrive with a complete checklist, rules, or template. 
 Use [case.md](../assets/case.md) for one current record. Make a requirement matrix: each applicable rule links to its source, required evidence or approval, an acceptance check, current status, and an acquisition action for any gap. Record exact invoice title, original template path/hash, current working form, and user decisions. Keep institution policy separate from user preference and observed evidence. Never invent a rule for an uncovered situation or silently apply a staff-only or funding-specific process to someone else. Record source date/version and section; resolve conflicts in authoritative requirements before calling the case ready.
 
 Clarify only unresolved points that materially affect the result. Reuse answers already given. Continue independent work while waiting. Proceed with authorized reversible preparation; sending messages, submitting claims, and publishing files require authorization for those actions. A request to prepare documents does not itself authorize them.
+
+### Before departure: prepare and assist with the OA application
+
+For a pre-departure case, use [oa-draft.md](../assets/oa-draft.md) to prepare a reviewable field map, attachment list, and budget. The [official NJU guide](https://wb.nju.edu.cn/splc/list.htm), checked on 2026-10-15, requires prior approval and a task approval document before official travel. It identifies a student application route separately from staff and group routes. Check the current route and actual form for the applicant; do not copy another traveler's filled application or invent current portal selectors. The guide also requires complete approved destinations and visits, and checking approved dates/duration. Flag discrepancies for correction rather than altering evidence to fit a planned claim.
+
+- Read the invitation, conference information, proposed itinerary, and available funding instructions. Prepare only fields relevant to the actual form: applicant details, purpose, host/contact, conference and travel dates, countries/cities, itinerary, expenses, and funding. Keep private identity fields in case storage. Distinguish conference dates from travel dates; document overnight flights and any uncertain day-count interpretation. Do not invent an invitation, acceptance, presentation, approval, or funding authorization. For multi-stop travel, map the full route and supporting invitations and confirm the treatment of transit-only stops rather than guessing.
+- Separate estimated budget from incurred expenses. Use quotes, published fees, or user estimates with their source/date, currency, quantity, and assumptions. Mark missing prices and unconfirmed funding explicitly; do not present a quote as a paid invoice or transfer an estimated total into the reimbursement ledger. Any proposed conversion must show its basis and remain subject to the applicable OA requirements. Apply expense caps only from the relevant current source.
+- Verify the official portal entry and actual visible field labels. Let the user complete login and identity verification through the normal interface. With available authorized browser tools, assist with filling fields and uploading the agreed attachments. Before a save, upload, or submit action, identify what it does; do not assume a save button cannot initiate a workflow. If authenticated browser access is unavailable, provide the field-by-field copyable draft and attachment filenames, then review the user-supplied field text or screenshots. Do not claim to have filled or saved OA remotely in that case.
+- Before submission, present the exact draft, budget basis, unresolved fields, and attachment list. Reuse existing submission authorization if it covers this application; otherwise leave a ready-to-review draft and request authorization for the concrete submission. Do not submit while mandatory facts or attachments remain unresolved. Verify the resulting receipt/status after any authorized submit; ambiguous timeouts require checking the existing application before retrying, not creating duplicates.
+- Record OA status separately as draft, submitted, returned, approved, or unknown, with its evidence. Save the application identifier only in the private case. A submitted application is not an approval. On a return, resolve the specified issues in the current draft; on approval, check the authorized itinerary, dates/duration and funding, and guide acquisition of the required formal task approval original. For changed plans, identify the applicable amendment route instead of silently editing the approved record or backdating a post-trip application. If travel already occurred without confirmed prior approval, record that gap and seek office guidance; do not manufacture an approval history.
+
+Carry the approved version forward as a reference, keeping planned, approved, and actual travel and costs distinct. Before and during travel, remind the user to retain relevant invoices, including the agency airfare invoice, and any required paper originals. On return, reconcile actual evidence and continue with collection and reimbursement preparation below.
 
 ## 2. Actively close material gaps
 
@@ -331,6 +355,9 @@ International computer science conference:
 Trip and funding context:
 Intended receiving office / submission stage:
 Task mode: prepare / audit / replay-on-copies
+Trip stage: planning-OA-draft / approval-pending / approved-pre-departure / traveling / post-trip / submitted
+OA field map, budget, attachments, and status record (if applicable):
+Planned / approved / actual itinerary differences:
 
 ## Delivered version and physical changes
 
@@ -413,6 +440,62 @@ First finance review outcome: outcome-unknown
 Outcome source/date and exact return reason, if any:
 
 === END SOURCE: skills/reimbursement-workflow/assets/case.md ===
+
+=== SOURCE: skills/reimbursement-workflow/assets/oa-draft.md ===
+
+# Pre-departure OA application draft
+
+Case ID:
+Current trip stage:
+Official guidance URL / checked date / applicable role:
+Verified portal entry and application type:
+Form inspected through: authenticated page / user-supplied fields / not yet inspected
+Application identifier and status, if any (private):
+Browser capabilities and authorized actions:
+
+## Field map
+
+| Actual OA field label | Proposed value / intentional blank | Source document/page or user confirmation | Confirmed / estimated / unresolved | Required correction or question |
+| --- | --- | --- | --- | --- |
+
+## Proposed itinerary
+
+Conference dates:
+Outbound / return travel dates:
+Full route, including any transit-only stops:
+Destination/date evidence:
+Day-count basis and unresolved interpretation:
+Difference from an existing approved itinerary, if any:
+
+## Estimated budget — not incurred expenses
+
+| Expense | Currency | Quantity / unit | Unit price | Estimated subtotal | Quote or estimate source/date | Funding basis / unresolved assumption |
+| --- | --- | --- | --- | --- | --- | --- |
+
+Native-currency subtotals:
+Proposed conversion basis, if the form requires one:
+Applicable cap / exception source, if relevant:
+Unconfirmed prices or funding:
+
+## Attachments
+
+| Required attachment / source of requirement | Private file / evidence ID | Verified contents | Ready / missing / needs correction |
+| --- | --- | --- | --- |
+
+## Review and handoff
+
+Draft revision and review date:
+User-only remaining steps:
+Mandatory gaps before submission:
+Specific submission authorization, if provided:
+Actions actually performed and observed results:
+Submission receipt/status evidence:
+Approval or return decision and source:
+Approved itinerary / duration / funding reference:
+Required formal approval original: needs obtaining / ready to bring / handed in
+Next action and owner:
+
+=== END SOURCE: skills/reimbursement-workflow/assets/oa-draft.md ===
 
 === SOURCE: skills/reimbursement-workflow/assets/expenses.csv ===
 

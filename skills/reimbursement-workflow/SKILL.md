@@ -1,11 +1,13 @@
 ---
 name: reimbursement-workflow
-description: Prepare Nanjing University reimbursement for international computer science conferences. Collect missing materials, retrieve authorized invoice emails, fill the original form, and review the final PDF against applicable university requirements. Not an official policy or general accounting service.
+description: Assist Nanjing University international computer science conference travel from pre-departure OA application drafting, itinerary and budget preparation to invoice collection, reimbursement forms and final PDF review. Not an official approval service.
 ---
 
 # Nanjing University Conference Reimbursement
 
 Read [the canonical workflow](references/workflow.md) before handling case files. Follow the requested scope; resume from the current case state instead of restarting intake.
+
+For pre-departure work, use [oa-draft.md](assets/oa-draft.md) to prepare mapped fields, estimated budget, and attachments; assist with the actual portal only through available authorized tools. Keep draft, submitted, and approved states distinct. For post-trip work, use the reimbursement records below.
 
 Use [case.md](assets/case.md), [expenses.csv](assets/expenses.csv), and [review.md](assets/review.md) as working templates in the private case directory. Keep resources in this skill folder unchanged during case work.
 
