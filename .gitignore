@@ -1,0 +1,17 @@
+cases/
+private/
+outputs/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+.env.*
+*.lock.json
+*.pdf
+*.docx
+*.doc
+*.png
+*.jpg
+*.jpeg
+*.zip
+START_CHAT-*.txt

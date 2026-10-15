@@ -1,0 +1,14 @@
+SYNTHETIC EVIDENCE DESCRIPTIONS ONLY
+
+E1: Ticket invoice. Title: Example University. Amount: USD 120.00.
+Outbound date: 2030-06-03. Return arrival: 2030-06-08.
+Route: Harbor City / Capital City / Lake City / Capital City / Harbor City.
+
+E2: Payment confirmation for the same E1 ticket. USD 120.00.
+This is supporting evidence, not an additional purchase.
+
+E3: Rail receipt. Service date: 2030-06-08. Amount: USD 25.50.
+
+E4: Lodging receipt. Checkout: 2030-06-07. Amount: EUR 64.20.
+
+E5 has no digital evidence. The fictional user reports the paper is ready.

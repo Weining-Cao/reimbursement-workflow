@@ -1,0 +1,4 @@
+expense_id,category,service_date,description,currency,amount,evidence_ids,include,status,conversion_rate,rate_direction,rate_date,rate_source,notes
+X1,airfare,2030-06-03,Return ticket,USD,120.00,E1;E2,true,reviewed,,,,,Invoice and payment are one expense
+X2,rail,2030-06-08,Return rail,USD,25.50,E3,true,needs-review,,,,,Outside the confirmed form period; retain discrepancy
+X3,lodging,2030-06-07,Lodging,EUR,64.20,E4,true,reviewed,,,,,Keep native currency

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Reimbursement Workflow"
+  short_description: "Collect missing materials and prepare for finance review"
+  default_prompt: "Use $reimbursement-workflow to help obtain my missing travel reimbursement materials and prepare a packet checked against the applicable finance requirements."
