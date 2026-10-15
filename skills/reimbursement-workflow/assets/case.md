@@ -45,6 +45,7 @@ Authorized mailbox alias, scope, and access method (no secrets):
 Available document editor/renderer/merger:
 User-only steps or unavailable capabilities:
 Existing authorization for external actions, if any:
+Applicant-only actions / teacher-handled submission route and source:
 
 ## Collection queue
 
@@ -59,6 +60,7 @@ Resolve only after the acquired evidence passes its acceptance check.
 Original template and SHA-256:
 Latest saved user form and SHA-256:
 Selected working form:
+Current edit mode: refill-original-template / minimally-edit-current-form
 Current rendered summary:
 Current combined packet and page manifest:
 
@@ -69,15 +71,22 @@ Current combined packet and page manifest:
 
 Delivery status: inspected-digital / user-confirmed-paper / expected / missing / not-applicable.
 
+## Printing and claim scope
+
+| Document / selected revision | Claim or separate handoff group | Include in claim totals/count? Basis | Print location or separate packet | Third-party data / permitted delivery check |
+| --- | --- | --- | --- | --- |
+
+Unselected alternatives and selection confirmation:
+
 ## Confirmed decisions
 
-| Field | Exact chosen value or intentional blank | User confirmation | Evidence difference / policy issue |
-| --- | --- | --- | --- |
+| Field / attachment scope / layout | Current value or intentional blank | User confirmation | Superseded decision / affected outputs | Evidence difference / policy issue |
+| --- | --- | --- | --- | --- |
 
 ## Open issues
 
-| Issue | Blocking? Why? | Required next action | Owner |
-| --- | --- | --- | --- |
+| Issue | Basis: observed defect / user-reported gap / possible risk / actual office return | Blocking which stage? Why? | Required next action | Owner |
+| --- | --- | --- | --- | --- |
 
 ## Office decisions and completion evidence
 
@@ -85,6 +94,14 @@ Delivery status: inspected-digital / user-confirmed-paper / expected / missing /
 | --- | --- | --- | --- | --- | --- |
 
 Keep unresolved rows when only part of an office visit is complete. Identify user-reported paper completion separately from inspected evidence; record the basis before closing a row.
+
+## Next office visit or teacher handoff
+
+Office / purpose / verified location, if known:
+Files and originals to carry:
+Handwritten descriptions, signatures, and office-only fields remaining:
+Precise question or requested action:
+Completion evidence to bring back:
 
 ## Last handoff
 

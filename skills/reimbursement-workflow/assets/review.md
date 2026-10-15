@@ -42,6 +42,9 @@ Current summary confirmed in combined PDF:
 Packet page count:
 Source-to-packet correspondence and legibility checked:
 Bookmarks, covers, alternate forms, and page manifest match current case:
+Printing groups versus claim totals/counts checked:
+Selected summary versus unselected alternatives confirmed:
+Shared documents checked for unrelated personal data:
 Parser failures, fallbacks, and independently completed checks:
 
 | Packet pages (1-based, inclusive) | Evidence ID / summary | Exact source file | Source pages |
@@ -57,7 +60,8 @@ Parser failures, fallbacks, and independently completed checks:
 Show this reminder prominently in user-facing delivery instructions. Copies in the PDF do not replace required originals; do not list confirmed-ready originals as missing.
 
 Paper materials confirmed by the user (not digitally inspected):
-Blocking gaps:
+Office handoff: destination/purpose, materials, remaining handwriting/signatures, question/action, completion evidence:
+Blocking gaps and their evidence basis (observed / user-reported / possible / actual return):
 Optional improvements:
 Artifact links:
 Submission status and source of confirmation:
