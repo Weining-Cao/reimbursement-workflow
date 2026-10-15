@@ -1,38 +1,62 @@
-# Nanjing University International Computer Science Conference Reimbursement Workflow
+# 南京大学计算机国际会议报销工作流
 
-An agent-assisted reimbursement workflow for **Nanjing University travelers attending international conferences in computer science**. It helps collect missing materials and prepare a packet for the university's reimbursement review. The agent finds the applicable rules, helps navigate websites and approval processes, retrieves invoices from authorized mailboxes, checks evidence, and repairs defects before handoff.
+面向南京大学参加计算机领域国际会议的同学，帮助你从零散材料开始，逐步完成材料收集、费用核对、汇总表填写、PDF 合并和提交前检查，尽量减少补件与返工。
 
-The success criterion is **acceptance without avoidable rework**, not simply creating a PDF. A pre-submission review must support that goal; only the institution's actual response establishes acceptance. All examples are fictional. Real claims, identity documents, and mailbox credentials are not included.
+**不用等材料齐了才开始，也不用先学会写代码。** 告诉 Agent 你参加什么会议、目前有什么材料，它会先检查已有内容，再帮助查找或获取缺少的材料。Agent 指你使用的、能够阅读文件并协助处理任务的 AI 助手。
 
-This is an independently maintained preparation aid, not an official university policy or approval. Apply current Nanjing University requirements and the receiving office's instructions for the traveler's role, funding source, and trip. Other institutions require a separate applicability review.
+本项目是辅助整理工具，不是学校发布的报销规定。以下办事说明主要面向学生出国（境）参会；境内会议、教职工、团组和专项资助应先核对各自流程。具体材料、费用范围及审批要求，以学校现行规定和经办部门要求为准。本仓库不包含任何同学的真实报销材料或个人信息。
 
-## Start here
+## 1. 怎么开始
 
-Clone this repository or download and extract its ZIP, then open this README. Choose one route below. You can start with only your university unit, traveler role, and a brief conference/trip description; unknown details and missing documents are part of the work. You do not need Python, a mailbox connection, or a complete checklist to start.
+先下载并解压仓库，或使用 Git 克隆。为自己的材料另建一个私人文件夹，不要把护照、发票和付款记录放进这个代码仓库。
 
-### A. An agent that can read local files
+### 方式一：上传一个文件就开始
 
-Create a separate private case folder for your own materials and open that folder in your agent. Keep the extracted workflow package separate. Paste this, replacing the two paths with their full locations:
+适合可以上传附件的聊天工具。
+
+1. 下载仓库中的 [START_CHAT.txt](START_CHAT.txt)，上传到聊天中；不能上传文本文件时，也可以粘贴其完整内容。
+2. 再提供你手头已有的材料，不齐也可以。
+3. 发送下面这段话，填上已知信息，其他写“不清楚”：
 
 ```text
-Read [full path to extracted package]/skills/reimbursement-workflow/SKILL.md
-and follow its linked workflow. My private case folder is [full case path].
-Help me prepare Nanjing University reimbursement for an international computer
-science conference. My unit, traveler role, and trip are: [what I know]. Inspect the available files and start with the gaps you can
-resolve now. Ask only for facts or actions that you still need from me.
+请按附件里的工作流，用中文协助我整理南京大学计算机国际会议报销材料。
+
+我的院系和学生身份：……
+会议名称、地点和出行日期：……
+经费来源或项目：……（不清楚可以先留空）
+我已有的材料：……
+纸质原件目前在哪里、哪些已交：……
+
+请先检查已有材料，查适用规定，帮助收集缺少的材料。
+需要我登录、签字、盖章或领取原件时，说明具体要做什么。
+请单独提醒需要原件的项目，以及旅行社机票发票。
+最后整理汇总表、合集 PDF、复核结果和仍需办理的事项。
+如果当前工具不能完成某一步，请明确说明，并先继续能做的部分。
 ```
 
-If the host cannot read a path, give it access through its normal file controls or use route B. No Skill installation is required for this route. For more context fields, use [the starter prompt](prompts/start.md).
+`START_CHAT.txt` 已包含流程、参考说明和记录模板，不必逐个上传引用文件。里面的指令目前以英文维护，你可以直接要求 Agent 用中文沟通。使用现成文件不需要安装 Python。
 
-### B. A chat that accepts text or attachments
+### 方式二：让 Agent 直接读本地文件
 
-Attach [START_CHAT.txt](START_CHAT.txt) from this repository, or paste its full contents if text-file upload is unavailable. Then say: "Follow the attached workflow. Help me prepare Nanjing University reimbursement for an international computer science conference. My unit, traveler role, and trip are: [what I know]. Here is what I have so far." Add whatever case materials you can provide. This one file contains the workflow, references, and working templates; you do not have to find each linked file yourself.
+适合能够访问本地文件的 Codex 或其他 Agent。不安装 Skill 也可以开始。
 
-`START_CHAT.txt` is included and generated from the canonical sources, not maintained separately. To regenerate after editing the workflow, run `python3 scripts/export_chat_bundle.py START_CHAT-new.txt` and review the new export before replacing the committed copy. Python is needed only to regenerate it, not to read or use it.
+在 Agent 中打开你的私人材料文件夹，然后发送：
 
-### C. Install the Codex Skill for repeated use
+```text
+请读取 [工作流文件夹的完整路径]/skills/reimbursement-workflow/SKILL.md，
+按照其中的流程，用中文协助我整理南京大学计算机国际会议报销材料。
 
-Copy the **whole** `skills/reimbursement-workflow` folder into your private case folder's `.agents/skills/` directory. Do not copy only `SKILL.md`, nest an extra folder, or overwrite an existing installation. The final layout must be:
+我的材料目录是：[私人材料文件夹的完整路径]。
+我的院系、身份、会议和出行情况是：……
+先检查已有材料，保留我的最新修改，再列出并推进缺少的事项。
+请把工作记录和生成文件保存在我的私人材料目录中。
+```
+
+把方括号替换成实际路径。如果 Agent 无法读取某个目录，通过所用工具的文件访问设置提供访问权限，或改用方式一。
+
+### 方式三：在 Codex 中安装 Skill，方便以后复用
+
+把本仓库的整个 `skills/reimbursement-workflow` 文件夹复制到私人材料目录下的 `.agents/skills/` 中。不要只复制 `SKILL.md`，也不要覆盖已有安装。
 
 ```text
 my-private-case/
@@ -44,90 +68,144 @@ my-private-case/
     scripts/
 ```
 
-Open `my-private-case` in Codex and send: `Use $reimbursement-workflow for the reimbursement materials in this folder. This is Nanjing University travel to an international computer science conference. My unit, traveler role, and trip are: ...`. If the skill is not detected, check the layout and restart Codex. You can also use route A with the installed `SKILL.md` path. Local discovery and invocation are described in the [official skills documentation](https://learn.chatgpt.com/docs/build-skills). This is a standalone skill folder, not a published plugin.
+在 Codex 中打开 `my-private-case`，发送：
 
-### What should happen first
-
-The agent should read what you already have, identify the applicable process or the smallest missing context, and start a case record with concrete next actions. It should explain which collection or document steps it can perform in this host. It should not ask you to complete every template or obtain every file before beginning. If you have no files yet, it can still establish the process and collection plan.
-
-| Missing capability | How to keep going |
-| --- | --- |
-| Web access | Use supplied official guidance; keep current-rule verification pending and request the specific official page or export needed |
-| Mail connection | Continue local-file review; guide an available authorized connection or accept exported relevant messages/invoices |
-| Word/PDF editing or rendering | Continue evidence review and field mapping; identify the missing conversion/inspection step before promising document outputs |
-| Local file access | Keep case/ledger drafts in the chat or downloadable artifacts when supported; never claim to have saved files on the user's computer |
-
-The workflow is maintained once, inside the self-contained skill bundle. The generic prompt and Codex adapter use that same file. This is an agent instruction package, not a standalone application with accounts already connected. Browser control, mailbox retrieval, document editing/rendering, OCR, and PDF merging use capabilities available in the host. The agent discovers them, reuses authorized connections, and identifies any missing capability. This repository does not bundle provider authentication or document engines.
-
-## How it moves the case forward
-
-1. Establish the applicable institution, traveler category, funding route, and actual acceptance requirements.
-2. Build a requirement-to-evidence map. For each gap, act: search available files/mail, visit the right portal, download an existing document, or guide a specific user-only step.
-3. Validate each acquired item before closing the gap. A receipt is not automatically an invoice; a downloaded approval is not automatically stamped.
-4. Reconcile the expenses, fill the original form, render it, and assemble the current packet.
-5. Review the final PDF as the receiving officer would. Repair missing proof, contradictions, calculations, signatures, and unreadable pages; repeat affected checks.
-6. Hand off only when mandatory checks pass. Record the real finance outcome and turn any avoidable rejection into a regression scenario.
-
-See [collection actions](skills/reimbursement-workflow/references/collection.md), [finance review](skills/reimbursement-workflow/references/finance-review.md), and a [fictional end-to-end walkthrough](examples/synthetic/collection-walkthrough.md).
-
-An office visit can resolve only part of a case. The case record retains each question, response, condition, and affected expense so the agent can resume from the actual result, update authorized working copies, and recheck affected outputs without treating a completed visit as final acceptance.
-
-## What the agent produces
-
-| Artifact | Purpose |
-| --- | --- |
-| Requirement matrix and collection queue | Connect each requirement to acceptable evidence, a retrieval route, and a verified result |
-| Case record and expense ledger | Record evidence, user decisions, blanks, and unresolved differences |
-| Filled original Word form | Preserve the institution's structure and the user's confirmed content |
-| Rendered summary PDF | Inspect actual line breaks, alignment, page boundaries, and signature space |
-| Combined PDF and page manifest | Include the current summary and required evidence in explicit order |
-| Finance review report | Map required checks to final packet pages; identify blockers and permitted separate paper materials |
-
-```mermaid
-flowchart LR
-    A[Partial materials and trip context] --> R[Find applicable finance requirements]
-    R --> G[Identify missing or invalid evidence]
-    G --> H[Collect through files, websites, mailbox, or user action]
-    H --> B[Validate evidence and reconcile facts]
-    B -->|Missing or invalid| G
-    B --> C[Fill original template]
-    C --> D[Render and inspect]
-    D --> E[Assemble and inspect packet]
-    E --> V[Review against finance requirements]
-    V -->|Missing proof| G
-    V -->|Checks pass| F[Handoff and record finance outcome]
-    D -->|Layout defect| C
-    E -->|New user edit| B
+```text
+请使用 $reimbursement-workflow，用中文整理当前目录中的
+南京大学计算机国际会议报销材料。我的院系、身份和会议情况是：……
 ```
 
-## Try the fictional case
+如果没有识别到 Skill，先检查目录层级，再重启 Codex；也可按方式二直接指定 `SKILL.md`。安装与发现机制见 [OpenAI 官方 Skill 说明](https://learn.chatgpt.com/docs/build-skills)。
 
-For a trial without personal files, follow the ready-to-paste prompt in [the examples](examples/synthetic/README.md). It starts a text-only review with clear expected results. The separate collection walkthrough illustrates website/mail steps; it does not execute them.
+## 2. 第一次需要提供什么
 
-An optional Python 3.10+ utility records file hashes and detects changes after a reviewed build. It does **not** render documents, inspect PDF contents, validate expenses, or certify readiness.
+先提供这些信息即可，不需要预先填写所有表格：
 
-These optional developer checks are not the reimbursement start command. Run them from the extracted `reimbursement-workflow` directory containing this README, not from your case folder. Use `python` instead of `python3` if that is your Python 3.10+ executable.
+| 信息 | 说明 |
+| --- | --- |
+| 院系、学生身份 | 例如本科生、硕士生、博士生，用于判断适用流程 |
+| 会议和行程 | 会议名称、官网或邀请函、国家或地区、城市、出发和返回日期 |
+| 经费来源 | 已知的项目、资助计划或经费承担方；不清楚就注明待确认 |
+| 已有文件 | 发票、收据、订单、付款记录、审批材料、最新版汇总表等，有多少先给多少 |
+| 当前办理进度 | 是否交过材料、纸质上换过哪一版、哪些签章或核销已办完 |
+| 原件情况 | 哪些是纸质原件，谁保管，是否已经交给经办老师 |
+
+如果你已经修改过 Word，请提供最新保存版本；不希望改动的已提交材料，要明确说明。已确认备好的纸质材料可以单独交付，不必为消除“缺文件”提示而重复上传。
+
+## 3. 通常要整理哪些材料
+
+下表是材料收集入口，**不是要求每个人无条件准备全部项目**。只整理与你实际行程、费用和经费要求有关的材料；Agent 应区分“已经有”“需要补”“不适用”。学校公开核销材料清单包括任务批件、汇总表、OA 校内审批表、邀请函、证件及出入境记录复印件、相关票据，见[外汇核销办理须知第 4 项](https://wb.nju.edu.cn/60/db/c4136a155867/page.htm)。
+
+| 类别 | 建议先交给 Agent 检查的材料 | 重点提醒 |
+| --- | --- | --- |
+| 出访审批 | 正式任务批件、OA 导出的校内审批表 | **正式批件与 OA 审批截图不是同一种材料**；原件另见下节 |
+| 会议材料 | 邀请函、会议名称和日期、已有注册确认 | 费用项目和参会行程应能对应 |
+| 汇总表 | 学校原始模板、你最新填写的 Word | 没有模板时，由 Agent 帮忙找；保留原模板和你的确认内容 |
+| 证件与行程 | 护照信息页、签证或签注、出入境记录等适用页面 | 与审批、机票和实际行程交叉核对；不把证件原件默认作为归档附件交走 |
+| 机票 | 发票或适用的报销凭证、行程资料、订单、付款记录 | **旅行社订票时，明确索取旅行社机票发票**；不能只给预订确认 |
+| 火车及其他交通 | 票据、日期、起讫地点、需要时的付款证明 | 有票据不代表费用一定可报，先核对范围 |
+| 住宿 | 酒店账单或发票、住宿明细、付款记录 | 核对入住日期、晚数、人数、金额；例外情形另备证明 |
+| 会议注册费 | 发票或收据、订单和付款记录；需要时补收费标准 | 将同一笔费用的多个证明关联起来，不重复计费 |
+| 签证及保险 | 签证费收据、相关服务费发票、保险凭证和付款记录 | **纸质签证收据原件单独保管、提醒携带** |
+| 补助及说明 | 与实际申请对应的说明和签章材料 | 申请学生补助时再核对相应要求，不默认每个人都申请 |
+
+学生申请出国补助时，学校另有书面说明、经费信息及签章要求，见[核销须知第 5 项](https://wb.nju.edu.cn/60/db/c4136a155867/page.htm)。外文票据需要中文说明并由经办人签字，见[第 14 项](https://wb.nju.edu.cn/60/db/c4136a155867/page.htm)。具体填写内容由 Agent 对照原文检查。
+
+### 旅行社订机票：一定单独核对发票
+
+请明确告诉 Agent 机票是旅行社订的。它应优先查找已授权邮箱或本地文件中的旅行社机票发票；尚未开具时，帮助整理索票所需的抬头和订单信息。
+
+- 需要单位抬头的国内发票，抬头按要求填写 **南京大学**，其余开票信息使用学校提供的准确资料；不要把这一要求机械套到境外外文票据。
+- 核对发票金额与订单、付款及申报费用，不能把同一笔机票费算两次。
+- 行程资料、报价单、预订确认和付款截图，各有用途，不能直接当作旅行社发票。
+- 如学校认可其他正式报销凭证，应记录适用依据，避免要求重复开票。
+- 原生电子发票保留原文件；需要怎样提交或打印，按经办要求执行，不凭空增加“纸质原件”要求。
+
+## 4. 哪些材料要特别提醒原件
+
+> **合集 PDF 齐全，不等于纸质原件已经备好或交到。**
+>
+> 本流程重点提醒 **OA 正式任务批件原件** 和 **纸质签证费收据原件**。这是材料准备提示；公开须知未逐项说明的原件形式和收取方式，应向经办部门确认，不能扩展成“所有电子票据都要纸质原件”。
+
+| 材料 | 怎样准备 | 不要混淆 |
+| --- | --- | --- |
+| **OA 正式任务批件原件** | 保留、携带学校正式出具的盖章批件，按认可渠道领取或打印，并记录交付情况 | OA“审批通过”的页面、导出预览或自行打印的截图，不能自动视为所需正式原件 |
+| **纸质签证费收据原件** | 收到时即妥善保管；扫描件用于整理，纸质原件列入携带和提交提醒 | 扫描件清晰，也不代表它能替代要求提交的纸质原件 |
+| **需要签字盖章的表格或说明** | 按适用要求取得完整签章版本，确认交纸质还是通过指定系统提交 | 无签章的 Word/PDF 不能证明签章已经办完 |
+| **旅行社等开具的电子发票** | 保存原始电子文件，并核对提交要求 | 电子原文件与扫描纸票不同，不自行要求不存在的纸质原件 |
+| **其他纸质票据** | 先保留原件，再逐项确认是否需要提交 | 不因已放入 PDF 就丢弃原件，也不假定所有票种规则相同 |
+
+学校说明任务批件可在线生成、经校园自助打印机打印，见[师生出国境系统通知](https://itsc.nju.edu.cn/53/07/c21558a611079/pagem.htm)。该 2023 年通知在此仅用于说明批件获取方式；学生核算顺序以现行学生办事指南为准。实际领取或打印方式按当前 OA 指引办理，这不等同于用普通打印机打印任意审批页面。
+
+提交前，让 Agent 单独给出一张**原件携带清单**，不要把提醒藏在几十页 PDF 中：
+
+| 材料 | 状态 | 保管或交付信息 |
+| --- | --- | --- |
+| OA 正式任务批件原件 | 待获取／已备好待携带／已交 | 由你补充 |
+| 纸质签证费收据原件（如适用） | 待获取／已备好待携带／已交 | 由你补充 |
+| 其他按要求提交的原件 | 逐项填写 | 由你补充 |
+
+确认“已备好”的材料应提醒携带，不应反复报成缺件；确认“已交”的要记下交给谁、何时交。原件找不到时，先向经办老师确认可接受的补办凭证，再联系出具方，不能自行认定复印件足够。
+
+## 5. Agent 会做什么，还需要我做什么
+
+```mermaid
+flowchart TD
+    A[提供基本信息和已有材料] --> B[查适用规定与原始模板]
+    B --> C[主动收集并核对材料]
+    C --> D[核对费用并填写 Word]
+    D --> E[导出并检查排版]
+    E --> F[合并 PDF 与提交前复核]
+    F -->|发现缺件或错误| C
+    F --> G[原件清单与待办交接]
+    G --> H[完成适用签章、核算和提交]
+    H --> I[记录实际财务反馈]
+    I -->|要求补件| C
+```
+
+Agent 在已有工具和授权范围内，可以查规定、下载模板、取发票、整理台账、填表、导出和检查文件。登录验证、签字、盖章、领取与交付原件，以及经办部门的核算和审核，仍需本人或相关老师完成。学校目前公布的学生出国（境）报销顺序是：**自行填写汇总表 → 国际化处线下外汇核算 → 财务处报销**；院系办理和签章环节也要按适用要求完成，不能用“已生成 PDF”代替。见[办事指南“个人出访—总结报销”](https://wb.nju.edu.cn/splc/list.htm)。
+
+工具不全时也能开始：没有邮箱连接就先整理本地文件；无法登录网站时由你完成登录或导出；没有 Word/PDF 编辑或渲染能力时先做材料核对，明确标记尚未完成的文档步骤。不要向聊天中粘贴密码或验证码。
+
+## 6. 最后应拿到什么
+
+- **材料与费用记录**：每项要求对应哪些证据，哪些费用计入，哪些问题仍待确认。
+- **可编辑的汇总表 Word**：沿用学校模板，保留已确认内容和应由经办部门填写的空白。
+- **检查过的汇总表 PDF 和合集 PDF**：版本一致、页面清楚、顺序可追溯；以工具实际完成的结果为准。
+- **原件携带清单和剩余待办**：明确你接下来做什么、找谁确认、完成后怎样继续。
+- **复核结果**：区分准备中、待复核、可提交，以及实际提交后的财务反馈。
+
+如果核销、原件或签章尚未完成，交付物应写清当前阶段。财务要求补件后，提供新的要求即可继续，Agent 应只更新受影响事项。只有取得实际审核反馈，才能记录通过；“已交材料”不等于“审核通过”。
+
+## 7. 官方入口与适用范围
+
+以下链接于 **2026 年 10 月 15 日**核对。办理前仍应查看学校最新页面，使用与你的身份、经费和行程相符的要求。
+
+| 官方入口 | 用途 |
+| --- | --- |
+| [国际化工作处：师生因公出国（境）办事指南](https://wb.nju.edu.cn/splc/list.htm) | 审批及学生、教职工等不同办理路线 |
+| [因公出国（境）外汇核销办理须知](https://wb.nju.edu.cn/60/db/c4136a155867/page.htm) | 材料、费用范围、补助及外文票据要求 |
+| [财务核销栏目](https://wb.nju.edu.cn/cwhx/list.htm) | 汇总表模板及相关标准入口 |
+| [师生出国境系统通知](https://itsc.nju.edu.cn/53/07/c21558a611079/pagem.htm) | 任务批件在线生成与自助打印说明 |
+
+“计算机国际会议”是本项目的使用场景，不代表学校对所有计算机会议另有统一补贴或免审政策。遇到未覆盖的情况，保留问题并请经办部门确认。
+
+## 8. 想先试用或继续维护
+
+不想先放入个人材料，可以使用[虚构示例](examples/synthetic/README.md)。这些文本展示费用去重、币种分开、日期差异和纸质材料记录，不是真实票据，也不是一套已可提交的报销材料。
+
+流程源文件统一维护在 [workflow.md](skills/reimbursement-workflow/references/workflow.md)。[启动提示](prompts/start.md)、[材料收集说明](skills/reimbursement-workflow/references/collection.md)、[财务复核说明](skills/reimbursement-workflow/references/finance-review.md)及[首次使用检查记录](evals/first-use.md)可供进一步查看。程序和内部指令仍以英文维护；本 README 是面向同学的中文使用说明。
+
+维护者修改流程后，可在仓库根目录运行以下命令生成新的聊天版文件，检查后再替换仓库里的旧版：
 
 ```sh
-python3 skills/reimbursement-workflow/scripts/check_packet.py record \
-  examples/synthetic/manifest.json --lock reimbursement-demo-1.lock.json
-python3 skills/reimbursement-workflow/scripts/check_packet.py check \
-  examples/synthetic/manifest.json --lock reimbursement-demo-1.lock.json
+python3 scripts/export_chat_bundle.py START_CHAT-new.txt
+```
+
+可选的 Python 3.10+ 文件校验工具只检查文件是否变化，**不能证明内容正确或财务会通过**。普通使用者无需运行它；需要时查看[工具说明](skills/reimbursement-workflow/references/integrity.md)。维护者可运行：
+
+```sh
 python3 -m unittest discover -s tests -v
 ```
 
-Expected results: `Snapshot recorded`, then `UNCHANGED`, then passing utility tests. A second `record` with the same lock fails by design; run `check` to recheck it or choose a new lock name for a new reviewed revision. This is file freshness only, not a completed claim. See [the tool contract](skills/reimbursement-workflow/references/integrity.md) before applying it to a real case.
-
-## Adapt and contribute
-
-Start with [case.md](skills/reimbursement-workflow/assets/case.md), [expenses.csv](skills/reimbursement-workflow/assets/expenses.csv), and [review.md](skills/reimbursement-workflow/assets/review.md). Record institution-specific requirements with their source and applicability; never promote one traveler's exception to a universal rule.
-
-Keep real cases in a separate private directory. Ignore patterns are only a convenience: inspect staged files and Git history before publishing. Do not include real evidence, identifiers, account details, correspondence, or document metadata in issues or examples. Reproduce failures with synthetic fixtures.
-
-Changes to instructions should be checked against [behavioral scenarios](evals/scenarios.md). Automated tests cover the integrity utility and chat-export packaging; behavioral and document rendering scenarios require an agent run and artifact review. No claim is made that these manual scenarios have all been executed.
-
-The share-package entry routes were exercised in a fresh extraction with synthetic files; see [the first-use check and its limits](evals/first-use.md).
-
-For an authorized rehearsal on a private case, use [the non-destructive replay procedure](skills/reimbursement-workflow/references/replay.md). Keep all case files and execution records outside this repository.
-
-Licensed under [MIT](LICENSE).
+请把真实材料保留在仓库外的私人目录，不要上传到提交历史、Issue 或示例中。提供问题反馈时，使用脱敏描述或虚构样例。项目采用 [MIT 许可证](LICENSE)。
