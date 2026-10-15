@@ -1,6 +1,6 @@
-REIMBURSEMENT WORKFLOW — CHAT EDITION
+NANJING UNIVERSITY INTERNATIONAL COMPUTER SCIENCE CONFERENCE REIMBURSEMENT — CHAT EDITION
 
-Attach this file or paste its full contents into your agent, then describe your institution, traveler role, trip, and available materials. Unknown details can be discovered during intake. No installation is required.
+Attach this file or paste its full contents into your agent, then describe your Nanjing University unit, traveler role, conference trip, and available materials. Unknown details can be discovered during intake. No installation is required.
 
 This file is generated from the maintained public sources listed below. It contains instructions, empty working templates, and an optional freshness script; it contains no claimant evidence or institutional rules.
 
@@ -26,14 +26,17 @@ skills/reimbursement-workflow/scripts/check_packet.py
 Use this after making the workflow available through a local Skill folder or the share package's `START_CHAT.txt`. Fill only what you know. You may omit every optional field; a short institution/role/trip description is enough to begin intake.
 
 ```text
-Follow the supplied Reimbursement Workflow to help me complete travel
-reimbursement with the goal of passing finance review without avoidable rework.
+Follow the supplied workflow to prepare Nanjing University reimbursement for
+attendance at an international computer science conference, with the goal of
+passing finance review without avoidable rework.
 Use the workflow from the supplied local SKILL.md (resolving references relative
 to that skill folder), or the included sections of START_CHAT.txt. If neither
 is available, tell me the missing workflow location instead of assuming it is
 installed. Keep my case files separate from the workflow package.
 
-Institution/unit and traveler role: [known context or unknown]
+Institution: Nanjing University
+Unit and traveler role: [known context or unknown]
+International computer science conference: [name or unknown]
 Trip, dates, destination, and funding program: [known context or unknown]
 Available files: [location or none yet]
 Rules and original template, if already available: [location or unknown]
@@ -65,10 +68,10 @@ Do not claim actual finance acceptance before receiving that outcome.
 
 ---
 name: reimbursement-workflow
-description: Help complete travel reimbursement from missing materials to finance review. Find applicable rules, guide website steps, retrieve invoices from authorized mailboxes, fill the original form, and review the final PDF for avoidable rejection. Not general accounting or tax advice.
+description: Prepare Nanjing University reimbursement for international computer science conferences. Collect missing materials, retrieve authorized invoice emails, fill the original form, and review the final PDF against applicable university requirements. Not an official policy or general accounting service.
 ---
 
-# Reimbursement Workflow
+# Nanjing University Conference Reimbursement
 
 Read [the canonical workflow](references/workflow.md) before handling case files. Follow the requested scope; resume from the current case state instead of restarting intake.
 
@@ -86,7 +89,9 @@ Return links to the completed case artifacts and a concise review outcome. Do no
 
 === SOURCE: skills/reimbursement-workflow/references/workflow.md ===
 
-# Travel reimbursement workflow
+# Nanjing University international computer science conference reimbursement workflow
+
+Scope: Nanjing University travelers attending international conferences in computer science. This is an independently maintained preparation workflow, not official university policy. Identify the traveler's role, funding route, and domestic/international travel category before applying current university and receiving-office requirements. Do not invent computer-science-specific allowances, conference rankings, or eligibility rules. Adaptation to another institution requires a fresh applicability check.
 
 Help a traveler get from incomplete materials to a packet that passes the institution's actual finance review without avoidable rework. Actively obtain what can be obtained, guide the user through steps only they can complete, and test the final packet against applicable requirements. File production is an intermediate step; first-pass acceptance is the outcome to measure, never a guarantee to invent. Use this document with any capable agent; no particular model or runtime is assumed.
 
@@ -320,7 +325,9 @@ Case ID:
 Status: draft
 Requested deliverables:
 Private case directory:
-Institution/unit and traveler role:
+Institution: Nanjing University
+Unit and traveler role:
+International computer science conference:
 Trip and funding context:
 Intended receiving office / submission stage:
 Task mode: prepare / audit / replay-on-copies

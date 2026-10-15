@@ -4,7 +4,9 @@ Case ID:
 Status: draft
 Requested deliverables:
 Private case directory:
-Institution/unit and traveler role:
+Institution: Nanjing University
+Unit and traveler role:
+International computer science conference:
 Trip and funding context:
 Intended receiving office / submission stage:
 Task mode: prepare / audit / replay-on-copies

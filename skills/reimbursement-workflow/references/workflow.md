@@ -1,4 +1,6 @@
-# Travel reimbursement workflow
+# Nanjing University international computer science conference reimbursement workflow
+
+Scope: Nanjing University travelers attending international conferences in computer science. This is an independently maintained preparation workflow, not official university policy. Identify the traveler's role, funding route, and domestic/international travel category before applying current university and receiving-office requirements. Do not invent computer-science-specific allowances, conference rankings, or eligibility rules. Adaptation to another institution requires a fresh applicability check.
 
 Help a traveler get from incomplete materials to a packet that passes the institution's actual finance review without avoidable rework. Actively obtain what can be obtained, guide the user through steps only they can complete, and test the final packet against applicable requirements. File production is an intermediate step; first-pass acceptance is the outcome to measure, never a guarantee to invent. Use this document with any capable agent; no particular model or runtime is assumed.
 

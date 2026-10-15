@@ -1,4 +1,4 @@
 interface:
-  display_name: "Reimbursement Workflow"
-  short_description: "Collect missing materials and prepare for finance review"
-  default_prompt: "Use $reimbursement-workflow to help obtain my missing travel reimbursement materials and prepare a packet checked against the applicable finance requirements."
+  display_name: "Nanjing University Conference Reimbursement"
+  short_description: "Prepare NJU international computer science conference claims"
+  default_prompt: "Use $reimbursement-workflow to prepare my Nanjing University reimbursement for an international computer science conference, collect missing materials, and check the packet against applicable university requirements."

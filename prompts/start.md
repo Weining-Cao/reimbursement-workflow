@@ -3,14 +3,17 @@
 Use this after making the workflow available through a local Skill folder or the share package's `START_CHAT.txt`. Fill only what you know. You may omit every optional field; a short institution/role/trip description is enough to begin intake.
 
 ```text
-Follow the supplied Reimbursement Workflow to help me complete travel
-reimbursement with the goal of passing finance review without avoidable rework.
+Follow the supplied workflow to prepare Nanjing University reimbursement for
+attendance at an international computer science conference, with the goal of
+passing finance review without avoidable rework.
 Use the workflow from the supplied local SKILL.md (resolving references relative
 to that skill folder), or the included sections of START_CHAT.txt. If neither
 is available, tell me the missing workflow location instead of assuming it is
 installed. Keep my case files separate from the workflow package.
 
-Institution/unit and traveler role: [known context or unknown]
+Institution: Nanjing University
+Unit and traveler role: [known context or unknown]
+International computer science conference: [name or unknown]
 Trip, dates, destination, and funding program: [known context or unknown]
 Available files: [location or none yet]
 Rules and original template, if already available: [location or unknown]

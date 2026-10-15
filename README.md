@@ -1,12 +1,14 @@
-# Reimbursement Workflow
+# Nanjing University International Computer Science Conference Reimbursement Workflow
 
-A portable agent workflow that helps a traveler obtain missing materials and produce a reimbursement packet aimed at passing finance review on the first submission. The agent finds the applicable rules, helps navigate websites and approval processes, retrieves invoices from authorized mailboxes, checks evidence, and repairs defects before handoff.
+An agent-assisted reimbursement workflow for **Nanjing University travelers attending international conferences in computer science**. It helps collect missing materials and prepare a packet for the university's reimbursement review. The agent finds the applicable rules, helps navigate websites and approval processes, retrieves invoices from authorized mailboxes, checks evidence, and repairs defects before handoff.
 
 The success criterion is **acceptance without avoidable rework**, not simply creating a PDF. A pre-submission review must support that goal; only the institution's actual response establishes acceptance. All examples are fictional. Real claims, identity documents, and mailbox credentials are not included.
 
+This is an independently maintained preparation aid, not an official university policy or approval. Apply current Nanjing University requirements and the receiving office's instructions for the traveler's role, funding source, and trip. Other institutions require a separate applicability review.
+
 ## Start here
 
-Clone this repository or download and extract its ZIP, then open this README. Choose one route below. You can start with only your institution, traveler role, and a brief trip description; unknown details and missing documents are part of the work. You do not need Python, a mailbox connection, or a complete checklist to start.
+Clone this repository or download and extract its ZIP, then open this README. Choose one route below. You can start with only your university unit, traveler role, and a brief conference/trip description; unknown details and missing documents are part of the work. You do not need Python, a mailbox connection, or a complete checklist to start.
 
 ### A. An agent that can read local files
 
@@ -15,8 +17,8 @@ Create a separate private case folder for your own materials and open that folde
 ```text
 Read [full path to extracted package]/skills/reimbursement-workflow/SKILL.md
 and follow its linked workflow. My private case folder is [full case path].
-Help me prepare travel reimbursement. My institution, traveler role, and trip
-are: [what I know]. Inspect the available files and start with the gaps you can
+Help me prepare Nanjing University reimbursement for an international computer
+science conference. My unit, traveler role, and trip are: [what I know]. Inspect the available files and start with the gaps you can
 resolve now. Ask only for facts or actions that you still need from me.
 ```
 
@@ -24,7 +26,7 @@ If the host cannot read a path, give it access through its normal file controls 
 
 ### B. A chat that accepts text or attachments
 
-Attach [START_CHAT.txt](START_CHAT.txt) from this repository, or paste its full contents if text-file upload is unavailable. Then say: "Follow the attached workflow. Help me prepare reimbursement for [institution, traveler role, and trip]. Here is what I have so far." Add whatever case materials you can provide. This one file contains the workflow, references, and working templates; you do not have to find each linked file yourself.
+Attach [START_CHAT.txt](START_CHAT.txt) from this repository, or paste its full contents if text-file upload is unavailable. Then say: "Follow the attached workflow. Help me prepare Nanjing University reimbursement for an international computer science conference. My unit, traveler role, and trip are: [what I know]. Here is what I have so far." Add whatever case materials you can provide. This one file contains the workflow, references, and working templates; you do not have to find each linked file yourself.
 
 `START_CHAT.txt` is included and generated from the canonical sources, not maintained separately. To regenerate after editing the workflow, run `python3 scripts/export_chat_bundle.py START_CHAT-new.txt` and review the new export before replacing the committed copy. Python is needed only to regenerate it, not to read or use it.
 
@@ -42,7 +44,7 @@ my-private-case/
     scripts/
 ```
 
-Open `my-private-case` in Codex and send: `Use $reimbursement-workflow for the reimbursement materials in this folder. My institution, traveler role, and trip are: ...`. If the skill is not detected, check the layout and restart Codex. You can also use route A with the installed `SKILL.md` path. Local discovery and invocation are described in the [official skills documentation](https://learn.chatgpt.com/docs/build-skills). This is a standalone skill folder, not a published plugin.
+Open `my-private-case` in Codex and send: `Use $reimbursement-workflow for the reimbursement materials in this folder. This is Nanjing University travel to an international computer science conference. My unit, traveler role, and trip are: ...`. If the skill is not detected, check the layout and restart Codex. You can also use route A with the installed `SKILL.md` path. Local discovery and invocation are described in the [official skills documentation](https://learn.chatgpt.com/docs/build-skills). This is a standalone skill folder, not a published plugin.
 
 ### What should happen first
 

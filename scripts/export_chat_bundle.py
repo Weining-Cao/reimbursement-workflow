@@ -26,9 +26,9 @@ SOURCES = (
 
 def export(root, destination):
     sections = [
-        "REIMBURSEMENT WORKFLOW — CHAT EDITION\n\n"
+        "NANJING UNIVERSITY INTERNATIONAL COMPUTER SCIENCE CONFERENCE REIMBURSEMENT — CHAT EDITION\n\n"
         "Attach this file or paste its full contents into your agent, then describe "
-        "your institution, traveler role, trip, and available materials. Unknown "
+        "your Nanjing University unit, traveler role, conference trip, and available materials. Unknown "
         "details can be discovered during intake. No installation is required.\n\n"
         "This file is generated from the maintained public sources listed below. "
         "It contains instructions, empty working templates, and an optional "
