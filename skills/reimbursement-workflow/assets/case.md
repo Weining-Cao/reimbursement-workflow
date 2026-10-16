@@ -32,6 +32,23 @@ Replay snapshot and source-hash record, if applicable:
 
 Status: pass / fail / pending / not-applicable (with reason).
 
+### 南京大学政策适用事实
+
+按 [NJU 场景规则](../references/scenarios/nju-travel-materials.md)从现有证据填写；未知项标注待确认，不要求一次填完全部字段。
+
+| 判定事实 | 当前结论及证据来源 | 对应规则／待确认问题 |
+| --- | --- | --- |
+| 邀请时及出访时身份、个人或团组、资助项目 | | NJU-001 |
+| 线上／线下参会、批准与实际行程、经费变更 | | NJU-002 |
+| 当前接收部门及其材料、纸质交付要求 | | NJU-003 |
+| 离抵国境日期、时长、学生补助批准和标准版本 | | NJU-004 |
+| 住宿限额与例外证明、邀请方供餐情况 | | NJU-005、006 |
+| 交通性质、租车预算审批、补助扣减依据 | | NJU-006、NJU-PENDING-001 |
+| 票面币种与扣款币种、官方模板版本、部门专填栏 | | NJU-007 |
+| 票据开具年份、办理日期、经费时限、超期审批 | | NJU-008 |
+
+没有例外、租车或补助申请等情形可据实记不适用；历史经验 `NJU-PENDING-002` 仅在已确认本次依据时采用。
+
 Required invoice title (verbatim):
 Airfare booking channel / agency, if applicable:
 Agency-issued airfare invoice requirement, evidence ID, and delivery status:
