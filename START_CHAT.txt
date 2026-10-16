@@ -10,6 +10,9 @@ CONTENTS
 prompts/start.md
 skills/reimbursement-workflow/SKILL.md
 skills/reimbursement-workflow/references/workflow.md
+skills/reimbursement-workflow/references/rules.md
+skills/reimbursement-workflow/references/scenarios/nju-travel-materials.md
+skills/reimbursement-workflow/references/scenarios/SCENARIO_TEMPLATE.md
 skills/reimbursement-workflow/references/collection.md
 skills/reimbursement-workflow/references/finance-review.md
 skills/reimbursement-workflow/assets/case.md
@@ -107,6 +110,12 @@ Help a traveler get from incomplete materials to a packet that passes the instit
 
 Support the whole trip lifecycle, starting with pre-departure OA application preparation. Identify the current stage: planning/OA draft, approval pending, approved/pre-departure, traveling, post-trip reimbursement, or already submitted. Resume at that stage; do not require post-trip invoices before drafting an application or restart an approved application merely to use this workflow.
 
+## 规则组织与最终交付
+
+先阅读[规则索引](rules.md)，匹配通用规则和本次场景，再建立第 1 节的检查矩阵。新需求补充为有来源、适用条件、边界示例和替代说明的规则；未知或冲突条目保留待确认，不为通过检查而放宽要求。历史材料参考须确认本次适用性。
+
+按下面的流程整理材料、生成 PDF、逐条检查并修正。全部适用规则通过，且没有影响当前交付阶段的未通过或待确认事项后，才能将核验过的文件标为最终版本。财务最终交付建议命名为 `<Trip>_<Year>_Reimbursement_Final.pdf`；记录文件名、SHA-256、检查日期和采用的规则版本（Git 提交，无法取得时记录所用来源版本）。中间部门办理材料保持相应阶段标识。流程与复核细则仍以本文件及所引用的复核说明为唯一维护位置。
+
 ## 1. Establish the case and acceptance criteria
 
 Resolve linked resources relative to the supplied skill folder; in a single-file chat export, use the included sections labelled with those source paths. Begin from the user's short trip description and available materials, even if the case folder is empty. Establish the smallest missing applicability facts while starting the case record and available collection work. Keep working records separate from the reusable package. If the host cannot write files, maintain the record and ledger in chat or supported downloadable artifacts and say where they actually exist. State the relevant tool limitations and next concrete action; do not make completing a questionnaire, installing Python, or connecting mail a prerequisite to intake.
@@ -130,7 +139,7 @@ For a pre-departure case, use [oa-draft.md](../assets/oa-draft.md) to prepare a 
 - Read the invitation, conference information, proposed itinerary, and available funding instructions. Prepare only fields relevant to the actual form: applicant details, purpose, host/contact, conference and travel dates, countries/cities, itinerary, expenses, and funding. Keep private identity fields in case storage. Distinguish conference dates from travel dates; document overnight flights and any uncertain day-count interpretation. Do not invent an invitation, acceptance, presentation, approval, or funding authorization. For multi-stop travel, map the full route and supporting invitations and confirm the treatment of transit-only stops rather than guessing.
 - Separate estimated budget from incurred expenses. Use quotes, published fees, or user estimates with their source/date, currency, quantity, and assumptions. Mark missing prices and unconfirmed funding explicitly; do not present a quote as a paid invoice or transfer an estimated total into the reimbursement ledger. Any proposed conversion must show its basis and remain subject to the applicable OA requirements. Apply expense caps only from the relevant current source.
 - Verify the official portal entry and actual visible field labels. Let the user complete login and identity verification through the normal interface. With available authorized browser tools, assist with filling fields and uploading the agreed attachments. Before a save, upload, or submit action, identify what it does; do not assume a save button cannot initiate a workflow. If authenticated browser access is unavailable, provide the field-by-field copyable draft and attachment filenames, then review the user-supplied field text or screenshots. Do not claim to have filled or saved OA remotely in that case.
-- Before submission, present the exact draft, budget basis, unresolved fields, and attachment list. First check the case’s operator restrictions: when the applicable process or local instructions reserve OA Submit for the applicant, leave that click to the applicant even if automation can fill and upload. When reimbursement is handled by a teacher, prepare the teacher handoff instead of assuming an online submission route. Reuse existing submission authorization if it covers this application; otherwise leave a ready-to-review draft and request authorization for the concrete submission. Do not submit while mandatory facts or attachments remain unresolved. Verify the resulting receipt/status after any authorized submit; ambiguous timeouts require checking the existing application before retrying, not creating duplicates.
+- Before submission, present the exact draft, budget basis, unresolved fields, and attachment list. For the NJU student OA workflow, only the applicant may click Submit; automation may fill fields and upload attachments. For other workflows, check their operator restrictions before any submission. When reimbursement is handled by a teacher, prepare the teacher handoff instead of assuming an online submission route. Reuse existing submission authorization if it covers this application; otherwise leave a ready-to-review draft and request authorization for the concrete submission. Do not submit while mandatory facts or attachments remain unresolved. Verify the resulting receipt/status after any authorized submit; ambiguous timeouts require checking the existing application before retrying, not creating duplicates.
 - Record OA status separately as draft, submitted, returned, approved, or unknown, with its evidence. Save the application identifier only in the private case. A submitted application is not an approval. On a return, resolve the specified issues in the current draft; on approval, check the authorized itinerary, dates/duration and funding, and guide acquisition of the required formal task approval original. For changed plans, identify the applicable amendment route instead of silently editing the approved record or backdating a post-trip application. If travel already occurred without confirmed prior approval, record that gap and seek office guidance; do not manufacture an approval history.
 
 Carry the approved version forward as a reference, keeping planned, approved, and actual travel and costs distinct. Before and during travel, remind the user to retain relevant invoices, including the agency airfare invoice, and any required paper originals. On return, reconcile actual evidence and continue with collection and reimbursement preparation below.
@@ -234,6 +243,160 @@ Keep a single current working set and a clearly identified handed-off revision. 
 After submission, extract reusable lessons into synthetic examples and workflow improvements; do not copy private documents, personal paths, correspondence, or case-specific exceptions into public guidance.
 
 === END SOURCE: skills/reimbursement-workflow/references/workflow.md ===
+
+=== SOURCE: skills/reimbursement-workflow/references/rules.md ===
+
+# 规则索引与适用范围
+
+项目由可逐条检查的规则组成。通用规则约束材料真实性、费用对应和交付检查，场景规则补充申请人类别、经费、票据和办理流程的边界。每次只将有依据且适用的条目纳入私人案例的检查矩阵。
+
+## 规则入口
+
+| 规则来源 | 适用范围 | 状态与使用方式 |
+| --- | --- | --- |
+| [执行流程](workflow.md) | 材料收集、整理、生成、复查和交付 | 有效的项目工作规则；第 1 节建立检查矩阵，第 7、8 节规定复核和交付 |
+| [财务复核说明](finance-review.md) | 最终 PDF 及认可的另交纸质材料 | 有效的检查规则；逐条记录通过、未通过、待确认或不适用 |
+| [南京大学差旅材料参考](scenarios/nju-travel-materials.md) | 南京大学国内及出国差旅；分别匹配身份、经费和费用类型 | 历史参考，待确认本次适用性；不得将原用户要求直接当作全校制度 |
+| [场景模板](scenarios/SCENARIO_TEMPLATE.md) | 新增具体需求和边界 | 模板，不是有效规则 |
+
+## 新需求与冲突
+
+已有场景能覆盖时补充原文件，否则按模板新建场景并登记到此表。规则应写明稳定标识符或可定位条目、适用条件、来源及日期、具体要求、不适用边界、正反例和替代关系。有依据的规则可直接维护；尚无依据的需求记录为待确认。
+
+只有范围匹配且依据成立的条目才应用。较新或更具体不自动意味着可以覆盖旧规则；替代时说明准确范围。个人要求纳入某项费用不代表财务认可。适用依据冲突或影响交付的问题未解决时，不得将材料标为最终版本。
+
+实际执行顺序和最终交付条件统一见[执行流程](workflow.md)，逐条结果写入私人案例的[复核记录](../assets/review.md)。本索引不保存真实票据、个人金额、账户或行程决定。
+
+=== END SOURCE: skills/reimbursement-workflow/references/rules.md ===
+
+=== SOURCE: skills/reimbursement-workflow/references/scenarios/nju-travel-materials.md ===
+
+# 南京大学差旅材料：历史参考规则
+
+- 状态：待确认适用性，不能直接作为所有申请人的通用强制规则。
+- 来源：2026-10-08 至 2026-10-09 收集的用户要求及下文逐项注明的官方核验记录；2026-10-16 同步至共享项目，未重新核验政策。
+- 适用范围：南京大学差旅材料准备。国内与出国要求分别列出；学生、教职工、经费项目和具体行程仍须分别判断。
+- 使用方式：agent 先按[规则索引](../rules.md)核对当前申请人的适用依据。用户要求不能自动升级为学校规定；历史官方信息须复核当前版本和适用范围后，才能进入本次有效检查清单。
+- 边界：不包含原案例的金额、票据、联系人、行程日期或个人处理决定。未找到依据的条目保持待确认；没有数字副本不等于所需纸质材料缺失。
+- 条目定位：沿用章节和具体条目定位，不在此次迁移中重编已有内容。
+
+## 检查示例
+
+| 情形 | 预期结果 |
+| --- | --- |
+| 本次适用依据确认国内单张票面金额超过人民币 1,000 元需要支付截图，票面为 1,000.01 元 | 检查对应支付截图 |
+| 同一规则下票面恰好为人民币 1,000 元 | 该阈值条目不触发，仍检查其他适用要求 |
+| 外币票据或其他单位的申请人 | 不套用国内人民币阈值或本单位要求；另查适用依据 |
+| 学生 OA 的正式批件只有下载预览 | 不据此认定已取得盖章原件；按本次认可渠道和纸质交付记录核对 |
+
+## 国内差旅
+
+### 交通
+
+- 飞机：电子发票抬头必须为 `南京大学`。
+  - 通过携程申请电子发票时，勾选所有信息字段：时间、出发地和目的地、航班、姓名、舱位。
+  - 也可使用航旅纵横 App，截取包含完整信息的页面。
+- 火车：电子发票抬头必须为 `南京大学`。
+
+### 住宿
+
+- 电子发票抬头必须为 `南京大学`。
+- 发票数量栏应体现住宿天数。
+- 通过携程申请电子发票时，勾选所有信息字段：酒店名称、入住日期、姓名；也可截取预订信息。
+
+### 会议注册费（如适用）
+
+- 电子发票抬头必须为 `南京大学`。
+
+### 支付凭证
+
+- 单张收据或发票票面金额超过人民币 1,000 元的，提供支付记录截图。
+
+## 出国差旅
+
+### 事前审批
+
+- 先通过 OA 申请。
+- 审批通过后，取得正式出国任务批件。[南京大学信息化建设管理服务中心的系统通知](https://itsc.nju.edu.cn/53/07/c21558a611079/pagem.htm)确认，可在线生成批件并在校内自助打印机打印。用户原始要求也提到行政北楼外办综合办公室领取；现场领取不是唯一有依据的途径。这不代表打印 OA 审批截图或使用普通打印机具有同等效力。
+- 用户于 2026-10-08 提供的学生 OA 申请页面明确支持获取打印码，在校内自助打印带公章的任务批件。其可下载报销材料还包括内部审批、汇总表和邀请函。仅有下载的 Word 文件或本地生成的预览，不能证明已取得盖章批件。
+- 自助打印可在校内终端使用校园卡、身份证或账户登录，也可通过南京大学 App 的自助服务申请取件码。参见[官方自助服务指南](https://oi.nju.edu.cn/zzfw_37059/list.htm)和[打印点位置](https://itsc.nju.edu.cn/ae/ef/c37057a634607/page.htm)。
+
+### 会议注册费
+
+- 费用依据，例如官网收费标准截图。根据用户 2026-10-08 的补充说明，发票和收据均有时，不要求该截图。
+- 发票。
+- 银行支付记录。
+
+<a id="transportation-1"></a>
+
+### 交通
+
+- 用户提供并于 2026-10-09 引用的第 9 条：可报交通包括往返国际旅程、抵离当日机场与住宿地之间的接送，以及注明日期和城市的城际交通。普通市内交通（出租车、公交、地铁）不在范围内。该摘录对赴台行程同样允许往返交通、抵离当日机场接送和城际交通。
+- 飞机行程单；机票一般通过旅行社预订。
+- 2026-10-08 网上复核：除正式机票收据／发票和支付凭证外，还应保留购票订单。南京大学财务处 [2024 年常见退单培训材料](https://life.nju.edu.cn/_upload/article/files/93/13/076c61f54b3f94e1ad5d37167c2b/b48a4360-a4a5-4f95-b5e1-449ee78b5a01.pdf)在出国差旅部分列出缺少机票订单的问题（通过搜索索引摘录核验，未能获取在线 PDF）。[研究生院项目流程](https://grawww.nju.edu.cn/_upload/article/files/ea/35/bac0547943d5bebabe5ad338a1cc/7f813f07-6aaa-4b49-8cfb-12b108e9abd5.pdf)也单独列出电子发票或正式行程单，以及购票订单。该项目特有的经费和办理流程要求，不推定适用于其他经费支持的行程。
+- 学校[南字〔2019〕188 号文件](https://hr.nju.edu.cn/1b/48/c6664a334664/pagem.htm)第二部分第（三）项第 5 点，取消教职工和学生境内外差旅的登机牌要求。不要把登机牌列为常规缺失的机票附件；它是否有助于支持替代出入境凭证，是另一项待判断问题。
+- 境外机场与酒店之间往返两程的出租车收据。
+- 境外火车票（如适用）。
+
+### 住宿
+
+- 发票及住宿流水。
+- 银行支付记录。
+
+### 签证相关费用
+
+- 签证相关费用发票。
+- 保险单首页（如适用）。
+- 2026-10-08 核验的官方说明：[南京大学核销指南](https://wb.nju.edu.cn/60/db/c4136a155867/page.htm)第 4、14、15 项要求提供任务批件、汇总表、OA 内部审批、邀请函、护照／签证／出入境复印件及相关票据；外文票据需用中文注明费用内容、日期、数量和金额，并由经办人签字。同一次行程的费用应一并报销，不得拆分。
+
+### 其他材料
+
+- OA 批件原件。
+- 护照身份页、签证页、出入境章页复印件。
+- 报销汇总表：可从 OA 或国际合作与交流处的[财务核销页面](https://wb.nju.edu.cn/cwhx/list.htm)获取。从官方入口获取当前适用的空白 Word 模板，并在私人材料目录中保留原始文件。外币支付填写原币金额。模板将国外补助计算交由外办，将汇率换算、国内补助及总额计算交由财务；通常应将这些部门计算栏留给相应部门填写。
+- [国际合作与交流处办事指南](https://wb.nju.edu.cn/splc/list.htm)明确：学生下载并填写汇总表，在财务报销前到外办线下核汇。不要将仅适用于教职工的在线汇总流程用于学生。
+
+<a id="overseas-allowances"></a>
+
+### 国外补助
+
+- [南京大学短期出国标准页面](https://wb.nju.edu.cn/59/aa/c4136a88490/page.htm)发布于 2022-06-01，仍被 [2026-01-14 的核销指南](https://wb.nju.edu.cn/60/db/c4136a155867/page.htm)引用，并提供[各国家和地区标准表](https://wb.nju.edu.cn/_upload/article/files/da/f9/c5fa55624c6caf58db0d78c62f98/13ca1a5f-2bfd-4349-843c-7bfbeef63001.pdf)。历史核验所用 PDF 共六页，捷克在第 4 页，文件年份对应 2022 年发布日期；该私人案例的下载文件不随本仓库分发。后续行程复用前，应检查来源页面是否修订。2026-10-08 核验：捷克，第 186 行，伙食费 USD 45／人／天，公杂费 USD 50／人／天。
+- 核销指南要求学生补助提供书面说明，注明全部或部分参照短期出国教师标准及经费账户，由经费负责人、院系领导签字并加盖院系公章。指南还以邀请方未提供伙食作为发放伙食补助的条件。
+
+=== END SOURCE: skills/reimbursement-workflow/references/scenarios/nju-travel-materials.md ===
+
+=== SOURCE: skills/reimbursement-workflow/references/scenarios/SCENARIO_TEMPLATE.md ===
+
+# 【场景名称】
+
+将此文件复制为 `skills/reimbursement-workflow/references/scenarios/<descriptive-scenario>.md`，启用前替换全部占位内容。本模板本身不是有效规则。除非明确说明相对于仓库根目录，否则新文件中的路径均相对于该文件。
+
+- 状态：待确认
+- 适用范围：【申请人类别、单位、行程／费用类型、经费和工作流程；注明哪些维度不限】
+- 关联规则：【通用规则和已有场景的链接】
+
+## SCENARIO-001 — 【边界或决定】
+
+- 状态：待确认
+- 依据：【正式机构／文件／条款／链接、带日期的用户指令，或观察到的实现限制；区分这些来源类型】
+- 日期：【来源／指令日期；已知的生效日期；实际核验日期】
+- 适用条件：【可以观察的条件，以及判断是否满足所需的凭证】
+- 要求的处理方式：【具体操作和预期结果】
+- 不适用或不能据此认定的事项：【相近但排除的情况、限制和未知项】
+- 替代关系：【旧规则标识符或指令日期，以及准确的替代范围；没有则写“无”】
+- 待确认事项：【问题、所需凭证或应确认的负责人；没有则写“无”】
+
+| 示例 | 预期结果 |
+| --- | --- |
+| 【满足条件的情形】 | 【本规则要求的操作】 |
+| 【相近但不满足条件的情形】 | 【本规则不适用；注明其他规则或保留为待确认】 |
+| 【缺失凭证或恰好达到门槛的情形，如适用】 | 【明确的边界处理方式】 |
+
+## 验证与受影响的输出
+
+【描述文档检查或相关测试／命令及其结果。通过行程状态链接说明受影响的汇总表、材料包、清单和待确认凭证。不要将个人材料或金额复制到可复用示例中。】
+
+=== END SOURCE: skills/reimbursement-workflow/references/scenarios/SCENARIO_TEMPLATE.md ===
 
 === SOURCE: skills/reimbursement-workflow/references/collection.md ===
 
@@ -536,6 +699,8 @@ expense_id,category,service_date,description,currency,amount,evidence_ids,includ
 
 Case / revision:
 Status:
+Review date:
+Rule version / Git commit (or source version when Git is unavailable):
 Reviewed files and hashes:
 Intended receiving office / submission stage:
 Applicable rules and unresolved source conflicts:

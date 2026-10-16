@@ -2,6 +2,8 @@
 
 Case / revision:
 Status:
+Review date:
+Rule version / Git commit (or source version when Git is unavailable):
 Reviewed files and hashes:
 Intended receiving office / submission stage:
 Applicable rules and unresolved source conflicts:
