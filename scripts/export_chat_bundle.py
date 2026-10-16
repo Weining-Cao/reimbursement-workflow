@@ -15,6 +15,7 @@ SOURCES = (
     SKILL / "references/workflow.md",
     SKILL / "references/rules.md",
     SKILL / "references/scenarios/nju-travel-materials.md",
+    SKILL / "references/scenarios/nju-doctoral-conference-funding-2026.md",
     SKILL / "references/scenarios/SCENARIO_TEMPLATE.md",
     SKILL / "references/collection.md",
     SKILL / "references/finance-review.md",

@@ -46,8 +46,11 @@ Status: pass / fail / pending / not-applicable (with reason).
 | 交通性质、租车预算审批、补助扣减依据 | | NJU-006、NJU-PENDING-001 |
 | 票面币种与扣款币种、官方模板版本、部门专填栏 | | NJU-007 |
 | 票据开具年份、办理日期、经费时限、超期审批 | | NJU-008 |
+| 支付方式、经费类别、实际付款人、商户及报销款收款人 | | NJU-009 |
+| 资助年度／学院／批次、既往同项目资助、本人获批用途及额度 | | NJU-FUND-001、002（如适用） |
+| 报告形式、回国日期、结项期限及导师／秘书审核结果 | | NJU-FUND-002、003（如适用） |
 
-没有例外、租车或补助申请等情形可据实记不适用；历史经验 `NJU-PENDING-002` 仅在已确认本次依据时采用。
+专项事实按[资助场景](../references/scenarios/nju-doctoral-conference-funding-2026.md)核对；没有例外、租车或补助申请等情形可据实记不适用；历史经验 `NJU-PENDING-002` 仅在已确认本次依据时采用。
 
 Required invoice title (verbatim):
 Airfare booking channel / agency, if applicable:
