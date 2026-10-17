@@ -1,48 +1,39 @@
-# Review for first-pass acceptance
+# 财务复核说明
 
-The review question is: can the receiving officer verify each claimed expense and required approval from this exact packet and its agreed separate materials, under the rules that apply to this traveler? Review the final artifact, not just source folders or a generation log.
+这份材料及获准另交的凭证，能否让接收老师按本次适用规则核对每项费用和审批？检查对象是实际 PDF 与约定材料，不是来源文件夹或生成日志。执行顺序、材料状态和最终交付条件统一见[工作流程](workflow.md)。
 
-## Establish the acceptance basis
+## 确定复核依据
 
-Use the requirement matrix in the case record. Each row must state an applicable requirement, its source/version and scope, an observable check, evidence IDs, and final packet pages or a separate-paper reference. Distinguish institutional requirements, specific office clarifications, user preferences, and unresolved assumptions. If authoritative sources conflict or a material interpretation remains unknown, record a blocking question with the precise facts the office needs to answer. Draft the question; send it only when authorized.
+使用案例检查矩阵：每行注明规则、来源／版本、适用范围、可观察的检查方式、证据 ID，以及合集页码或纸质另交引用。区分制度要求、经办澄清、用户偏好和未知假设。依据冲突时登记影响阶段、精确问题及所需事实；只起草问题，有发送授权才联系他人。
 
-Identify the actual delivered revision and submission stage before assigning defects. Paper replacements can resolve a stale local PDF without updating the local file. Material delivery, office clearance, and final acceptance need separate evidence. Label an issue as confirmed, conditional, uninspected, or resolved-by-user-confirmation where appropriate; do not turn lack of a digital copy into a claim that required paper was omitted.
+先识别实际递交版本和办理阶段。已确认的纸质替换可能改变实际递交内容，而本地 PDF 仍旧；记录差异，不能称旧 PDF 已同步。材料送达、部门核算／签章和财务批准分别取证；缺电子副本不证明纸件遗漏。问题区分已确认、条件性风险、未检查及用户确认解决，不夸大检查范围。
 
-Do not add universal rules for invoice amounts, allowances, boarding passes, translations, stamps, or payment proofs. Test such items only when applicable requirements establish them. A requirement marked not-applicable needs a reason and source, not an empty checkbox.
+发票金额、补助、登机牌、翻译、签章或付款证明都按适用依据检查，不新增无依据的通用要求。不适用项须有理由及依据，不能用空白勾选代替。
 
-## Execute a distinct review pass
+## 独立检查实际材料
 
-| Review area | What to establish from actual evidence |
+| 检查项 | 要从凭证确认的内容 |
 | --- | --- |
-| Applicable process | Correct traveler category, funding route, current template, prior approvals, and required review sequence |
-| Expense eligibility | Each claimed category and service date fits the supplied rules; required exceptions or approvals exist |
-| Evidence sufficiency | Each expense has the document types and fields required for it; invoice, order, payment record, and webpage are not treated as interchangeable |
-| Identity and details | Required buyer title, claimant, merchant, dates, route, service, quantity, and currency are consistent or have an accepted explanation |
-| Amounts and duplicates | Summary matches the claimed allocation, not the sum of all archived receipts; supporting documents do not duplicate an expense; refunds/corrections are reconciled; currency conversion has an applicable basis |
-| Quantities and exceptions | Claimed nights, beneficiaries, and units are supported; applicable caps and exceptions have a source and acceptance basis; a self-written explanation is not an institutional approval |
-| Dates and itinerary | Approvals, travel dates, attendance, lodging, and entry/exit records reconcile where required; material discrepancies are resolved |
-| Signatures and physical steps | Required signatures, stamps, office calculations, and paper handoffs are complete for the intended submission stage |
-| Final PDF usability | Current summary is included; all required pages are legible, complete, correctly oriented, and easy to locate; totals and page map match the actual PDF |
+| 办理流程 | 身份、经费、当前模板、事前审批、所需部门顺序与实际办理阶段 |
+| 费用资格 | 费用类别、服务日期、适用范围、所需例外及审批 |
+| 凭证充分性 | 文档类型及字段满足要求；发票、订单、付款记录、网页各自的用途明确 |
+| 身份和细节 | 所需抬头、申请人、商户、日期、路线、服务、数量及币种一致或有获认可的解释 |
+| 金额与去重 | 汇总表符合申报分摊；多份证明只算一次；退款／冲正已核对，换算有适用依据 |
+| 数量与例外 | 晚数、人数、单位数量、限额及例外证据可核对；自写说明不是部门批准 |
+| 日期和行程 | 批准行程、实际出行、参会、住宿和出入境记录按要求对应，重大差异已解决 |
+| 签章与纸质环节 | 目标阶段要求的签字、盖章、部门核算和纸质交接已完成或按认可路线确认 |
+| PDF 可用性 | 当前汇总表在合集内，必要页面清楚、完整、方向正确、易定位；金额及页码对应一致 |
 
-Read the combined PDF without relying on the author's memory. Locate the evidence for every requirement. Record pass, fail, pending, or not-applicable with a basis in [review.md](../assets/review.md). A text search can help locate pages but cannot establish legibility or a signature. Inspect the relevant page images at a readable scale.
+按[复核模板](../assets/review.md)逐项记录 `pass`（通过）、`fail`（未通过）、`pending`（待确认）或 `not-applicable`（有理由的不适用）。每个适用条目都须通过；未检查、缺信息和待确认不算通过。文本搜索只帮助定位，不能证明签章或页面清晰；需以可读比例检查实际页面。
 
-Continue independent checks after a failed item and list all actionable findings. Inspect outlines, generated cover text, and page manifests as well as pages. A passing historical arithmetic script is not evidence that the current claim is correct; its expectations must match the selected revision.
+发现失败项后继续独立检查，列出全部可处理问题。除了页面，还核对目录、书签、封面和页码清单；旧算术脚本通过不证明当前申报正确，检查预期须匹配选中版本。
 
-Give each issue a concrete repair: obtain the missing proof, seek a correction, resolve the rule interpretation, change an incorrect calculation, or re-render a clipped page. Preserve user choices in the draft while explaining required corrections; do not conceal conflicts or fabricate an explanation. User preference cannot establish eligibility.
+每项问题给出具体修正：补材料、更正票据、核实解释、修改计算或重排页面。草稿保留用户选择和差异，资格问题未解决前不能放行。修正后重建受影响输出，再检查汇总一致性、来源与页码对应，并确认实际交付文件未在复核后变化。
 
-Return to collection, reconciliation, or layout correction as needed. After repairs, rebuild the affected outputs and repeat affected checks, including summary consistency and final page mapping. Verify the packet was not changed after review.
+## 复核结论与交接
 
-## Release condition and delivery
+按工作流程第 4 节判定最终交付；`ready-for-user-submission` 仅指最终财务交付检查通过，不指学生 OA 可代提交或财务已批准。需要前置部门核算／签字时，材料标为中间阶段，说明接收部门、待办和返回证据，不代填部门栏制造完成假象。
 
-Use ready-for-user-submission only when:
+另交纸质材料须有认可路线、保管人和该路线所需完成／确认记录，明确哪些依据仅为用户报告。将最终文件、可编辑汇总表、结论和具体交付动作交给申请人；agent 调试信息和凭据不放入递交 PDF。目录、费用索引或说明封面只在有用且符合格式要求时加入，不改变官方模板。
 
-- Every applicable mandatory requirement has a supported pass or a justified not-applicable result.
-- No blocking fail, pending interpretation, missing mandatory evidence, or unfinished required signature remains for the intended receiving office.
-- The exact combined PDF has passed content and visual review and corresponds to the latest working form and evidence.
-- Separate physical materials have a permitted delivery route, an identified owner, and recorded completion/confirmation appropriate to that route. State which were user-confirmed rather than inspected.
-
-If an intermediate office must calculate or sign before finance submission, label the deliverable for that intermediate step; do not call it ready for final finance review. Do not fill office-only fields yourself to create the appearance of completion.
-
-The handoff should let the user act immediately: final packet link, editable form, the review result, and exact physical or portal delivery steps. Keep agent diagnostics and private credentials out of the submission PDF. Include a contents/expense index or explanatory cover only when useful and permitted by the institution's format; preserve the official template.
-
-Readiness is a supported pre-submission finding. Record actual acceptance only from the office's response or the user's report. When a case is returned, record the concrete reason and whether it was a missed check, ambiguous rule, new requirement, or changed evidence. Convert avoidable failures to synthetic regression scenarios. Measure first-pass acceptance as accepted-without-rework / cases-with-known-first-review-outcome; report unknown outcomes separately.
+实际财务结果只根据经办回复或用户报告记录，并注明来源。退单区分漏检、规则歧义、新要求或凭证变化，修正可避免的问题并形成脱敏回归示例。材料就绪、脚本成功或模拟测试不计入真实首次通过率。

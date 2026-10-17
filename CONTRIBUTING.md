@@ -11,7 +11,7 @@
 - 可复用的报销要求写入 [规则索引](skills/reimbursement-workflow/references/rules.md)。
 - 仅适用于特定行程、申请人类别、费用类型或工作流程的处理方式，按[模板](skills/reimbursement-workflow/references/scenarios/SCENARIO_TEMPLATE.md)写入 `skills/reimbursement-workflow/references/scenarios/<scenario>.md`。相关边界可以放在同一文件中，不必为每张票据建一个文件。
 - 金额、已收集凭证、待补材料和输出是否已同步，写入仓库外私人材料目录中的案例记录。引用规则链接，不重复维护规则正文。
-- 执行流程仅维护在 `skills/reimbursement-workflow/references/workflow.md`；规则索引和 README 引用该流程，不另写一份执行流程。命令和实现限制写入对应脚本指南。`AGENTS.md` 仅保留删除后会改变智能体行为或导致错误的指令；详细规则通过链接引用。
+- 执行流程仅维护在 `skills/reimbursement-workflow/references/workflow.md`；README、流程图、启动提示和 Skill 入口按“适用规则 → 整理材料 → 逐条检查 → 最终交付”摘要，详细顺序与交付判定不另写一份。命令和实现限制写入对应脚本指南。`AGENTS.md` 仅保留删除后会改变智能体行为或导致错误的指令；详细规则通过链接引用。
 
 ## 新增或修改规则
 
@@ -21,7 +21,7 @@
 4. 至少给出一个适用示例和一个相近但不适用的示例，分别注明预期结果。涉及临界值或缺失凭证时，补充对应边界示例。
 5. 状态使用“待确认”“有效”或“已替代”。“有效”表示有依据且适用于所述范围，不代表费用已获报销批准。待确认条目要写明问题，以及需要谁确认或补充什么凭证。维护者可以直接记录有依据的规则；日常文档修改无需增加审批环节。
 6. 替换旧规则时，注明旧规则标识符或指令日期，并说明究竟替换了哪项处理方式。在同一次修改中更新旧规则的状态或替代说明，将理由和来源保留在文档或 Git 历史中。
-7. 将新增的有效场景补充登记到 `skills/reimbursement-workflow/references/rules.md`，更新受影响的链接，检查示例和受影响的输出后再提交。供安装版 Skill 使用的规则必须位于 Skill 目录内；聊天版需要的规则文件同时加入 `scripts/export_chat_bundle.py` 的显式 `SOURCES` 清单，重新生成 `START_CHAT.txt` 并运行导出测试。模板和待确认资料若被运行时引用，也须包含在聊天版中。
+7. 将新增的有效场景补充登记到 `skills/reimbursement-workflow/references/rules.md`，更新受影响的链接，检查示例和受影响的输出后再提交。不从公共文档链接私人案例路径。供安装版 Skill 使用的规则必须位于 Skill 目录内；聊天版需要的规则文件同时加入 `scripts/export_chat_bundle.py` 的显式 `SOURCES` 清单，重新生成 `START_CHAT.txt` 并运行导出测试。模板和待确认资料若被运行时引用，也须包含在聊天版中。
 
 ## 适用范围与冲突处理
 
@@ -47,13 +47,19 @@
 
 ## 维护命令与参考
 
-流程源文件维护在 Skill 目录中。修改聊天版包含的来源后，生成新文件、检查内容，再替换 `START_CHAT.txt`：
+流程源文件维护在 Skill 目录中。修改聊天版包含的来源后，先生成新文件：
 
 ```sh
 python3 scripts/export_chat_bundle.py START_CHAT-new.txt
+```
+
+检查新文件内容，再替换聊天版并运行测试：
+
+```sh
+mv START_CHAT-new.txt START_CHAT.txt
 python3 -m unittest discover -s tests -v
 ```
 
-导出工具拒绝覆盖已有文件；使用现成聊天版无需安装 Python。文件校验工具需要 Python 3.10+，只检测文件是否变化，不证明内容正确或财务通过，详见[工具说明](skills/reimbursement-workflow/references/integrity.md)。
+导出工具拒绝覆盖已有文件；测试会核对聊天版与源文件逐字节一致。使用现成聊天版无需安装 Python。文件校验工具需要 Python 3.10+，只检测文件是否变化，不证明内容正确或财务通过，详见[工具说明](skills/reimbursement-workflow/references/integrity.md)。
 
 [虚构示例](examples/synthetic/README.md)、[情景检查](evals/scenarios.md)和[首次使用记录](evals/first-use.md)用于复现问题与评估改进。它们不代表已验证真实 OA 操作或财务通过。

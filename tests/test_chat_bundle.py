@@ -15,6 +15,12 @@ SPEC.loader.exec_module(bundle)
 
 
 class ChatBundleTests(unittest.TestCase):
+    def test_published_bundle_matches_current_sources(self):
+        with tempfile.TemporaryDirectory() as folder:
+            destination = Path(folder) / "START_CHAT.txt"
+            bundle.export(ROOT, destination)
+            self.assertEqual(destination.read_bytes(), (ROOT / "START_CHAT.txt").read_bytes())
+
     def test_export_is_complete_and_excludes_unrelated_case_files(self):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)

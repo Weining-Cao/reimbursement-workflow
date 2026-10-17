@@ -1,54 +1,33 @@
-# First-use package check
+# 历史首次使用检查
 
-Checked on 2026-10-15 using the v4 share ZIP, then a freshly extracted v5 candidate.
-This was a maintainer-run onboarding rehearsal, not an independent novice study
-or a new Codex client session. Only public files and synthetic case data were used.
+**检查日期：2026-10-15。** 当时使用 v4 分享包及重新解压的 v5 候选包。这是维护者执行的上手演练，不是独立新用户研究或新 Codex 会话；只用了公共文件与虚构案例。下面记录的是当时版本的发现，目录、首页及测试数量以当前仓库为准，不把文档整理当作重新执行。
 
-## Observed friction and fixes
+## 当时发现与修正
 
-| First-use step | Observed friction | Change |
+| 步骤 | 发现 | 当时处理 |
 | --- | --- | --- |
-| Give the workflow to a chat without filesystem access | The reader had to collect several linked references and templates manually | The share ZIP now includes `START_CHAT.txt`, generated from the canonical sources; one attachment or full-text paste carries the resources |
-| Use the starter prompt after installing only the Skill folder | The old prompt's repository-relative workflow path did not exist in the new case directory | The prompt resolves resources from the supplied Skill folder or included chat sections |
-| Choose where to put case files and how to begin | The README did not show a complete no-install prompt or installed-folder layout | Separate local-file, chat, and installed-Skill routes with explicit locations and a small starting request |
-| Run the optional commands from the case directory | The repository-relative example path failed there | State the required working directory and separate developer checks from reimbursement intake |
-| Repeat the example record command | Exclusive creation correctly returned an existing-lock error, but the recovery was easy to miss | Explain expected output, use `check` for the same snapshot, and choose a new lock for a new revision |
-| Try the example without running code | The example explained expected decisions but did not supply a starting request | Add a text-only trial prompt using three existing synthetic inputs and a concrete next action |
+| 无文件系统的聊天使用工作流 | 需要逐个收集引用和模板 | 加入由源文件生成的 `START_CHAT.txt`，单附件或全文粘贴即可提供资源 |
+| 只复制 Skill 后使用启动提示 | 原提示的仓库相对路径不存在 | 相对于 Skill 或聊天版来源区段解析 |
+| 选择案例位置和开始方式 | 首页缺少完整提示与目录说明 | 当时分别说明本地文件、聊天和安装路径；当前首页已精简 |
+| 从案例目录运行可选命令 | 仓库相对路径失效 | 说明工作目录，分开维护测试与报销入口 |
+| 重复执行 record | 已有锁被正确拒绝，但恢复方式不明显 | 同快照用 check，新版本用新锁文件 |
+| 不运行代码试用示例 | 缺少明确起始请求 | 增加基于三个虚构输入的文本试用与下一步 |
 
-## Executed checks
+## 当时实际执行的检查
 
-- Extracted the share package into a fresh temporary directory; copied the whole
-  Skill into a separate case directory whose name contains spaces. Its entrypoint
-  and linked resources resolved without relying on the original repository.
-- Checked local Markdown links in both the extracted package and installed Skill.
-- Generated the chat export from an unrelated working directory and compared it
-  byte-for-byte with the copy in the candidate share ZIP. All source sections were
-  present; no separately requested reference was needed to read the workflow.
-- Ran the README's record/check commands from the documented package root; observed
-  recorded and unchanged results. Repeating record was rejected without overwrite.
-- Copied the entire synthetic example to a scratch case, recorded it, changed only
-  the scratch summary, and observed the expected stale result and exit code 1.
-- Reviewed the three synthetic inputs and independently recomputed USD 145.50 and
-  EUR 64.20 with decimal arithmetic. The scratch review retained the date conflict,
-  intentional blank, and user-confirmed paper status; it did not assert PDF readiness.
-- Ran 13 standard-library tests from the extracted package, covering freshness and
-  chat-export completeness, exclusion of unrelated case data, execution outside
-  the repository, overwrite refusal, and missing-source failure without partial output.
-- Verified the supplied package files remained unchanged after the trial. Skill
-  frontmatter validation also passed.
+- 将分享包解压到新临时目录，完整 Skill 复制至含空格的独立案例目录；入口和引用不依赖原仓库。
+- 核对解压包及独立 Skill 的本地 Markdown 链接。
+- 在无关工作目录生成聊天版，与当时分享包逐字节一致，来源齐全。
+- 按当时文档从包根目录运行 record／check，得到已记录及未变；重复 record 拒绝覆盖。
+- 复制虚构示例后只改副本汇总，得到过期结果及退出码 1。
+- 用十进制独立复算 USD 145.50、EUR 64.20，保留日期冲突、有意空白和本人确认纸件，没有声称 PDF 就绪。
+- 在解压包运行当时 13 项标准库测试：文件变化、聊天导出完整性、排除无关案例、仓库外运行、拒绝覆盖及缺来源无半成品。
+- 确认输入包文件未变，Skill 元数据校验通过。
 
-The recorded rehearsal used macOS and Python 3.9.6; the same 13-test suite also
-passed on Python 3.14.7. The documentation recommends Python 3.10+ for optional
-helpers; no Python installation is needed to consume the prebuilt chat export
-or follow the workflow in a capable agent.
+当时使用 macOS、Python 3.9.6，同一组 13 项测试也在 Python 3.14.7 通过。可选工具文档推荐 Python 3.10+；使用现成聊天版或让具备能力的 agent 执行流程无需先装 Python。
 
-## Limits
+## 证据范围
 
-This checked extraction, paths, bundled resources, commands, and a text-only first
-review. It did not launch a fresh Codex UI, verify Skill auto-discovery in a new
-client, upload the attachment to another chat provider, or test every operating
-system. Installation guidance was checked against the [official skills documentation](https://learn.chatgpt.com/docs/build-skills).
-The synthetic trial did not exercise mail connection, authenticated portals, Word
-editing, PDF rendering/assembly, or finance acceptance. Those paths require their
-own host capabilities and applicable evidence; a successful start is not a completed
-claim.
+演练只覆盖解压、路径、资源、命令和文本初审，没有新开 Codex UI、验证新客户端自动发现 Skill、上传至其他聊天服务或测试全部系统。当时安装说明对照[官方 Skill 文档](https://learn.chatgpt.com/docs/build-skills)检查。
+
+未测试真实邮箱、已登录门户、Word 编辑、PDF 渲染／合并或财务审核。成功开始不代表完成报销；这些步骤需要实际能力及本案证据。

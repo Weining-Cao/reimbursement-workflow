@@ -1,44 +1,38 @@
-# From partial materials to a finance-ready packet
+# 材料收集与复核演练
 
-This is an illustrative interaction for a separate fictional case, not a tool execution log, an institutional policy, or a claim of actual acceptance. It does not change the unresolved state of the neighboring text fixtures. Portal names, requirement IDs, and outcomes below are hypothetical; a live run must discover real sources and inspect real artifacts.
+这是独立的假想交互，不是工具执行记录、学校政策或真实财务通过结果。它不改变相邻文本示例的未解决状态；入口、规则 ID 和结果均为虚构，实际使用须查真实来源并检查实际文件。
 
-## Starting point
+## 1. 适用规则
 
-The user says: "I attended a workshop. I have the tickets and a hotel receipt, but I do not know what else finance needs. Help me finish the reimbursement."
+用户说：“我参加了一个研讨会，有交通票和酒店收据，不知道还需要什么，请帮我整理报销。”
 
-The agent inspects those files, then asks only for missing context: which institution and traveler category apply, and which funding route if it affects the process. It discovers the available browser, mailbox, and document tools. The user has already authorized reading one mailbox; the agent reuses that scope.
+agent 先检查文件，只询问缺失且影响办理的单位、身份与经费事实，发现可用浏览器、邮箱和文档工具，并沿用用户已给的单个邮箱读取授权。查阅适用官方要求及原表后，假设确认以下规则：
 
-The agent finds and reads the institution's official instructions and original form. In this fictional case, the sources establish these requirements:
-
-| ID | Required result | Initial finding | Next action |
+| ID | 所需结果 | 当前情况 | 下一步 |
 | --- | --- | --- | --- |
-| R1 | Original form with required fields | No template supplied | Download the verified official template |
-| R2 | Registration invoice and matching payment proof | No registration documents supplied | Search the authorized mailbox for merchant/order/date |
-| R3 | Lodging receipt with stay details and payment proof | Receipt lacks stay dates | Find booking details and request the matching payment export |
-| R4 | Stamped approval, separate paper permitted | User has only a portal preview | Locate the official pickup instructions |
-| R5 | Required department review before finance submission | Not completed | Prepare the form for that office, then obtain the reviewed copy |
+| R1 | 按原模板填写必需字段 | 未提供模板 | 下载已核验的官方模板 |
+| R2 | 注册发票与对应付款证据 | 尚无注册材料 | 在授权邮箱按商户／订单／日期查找 |
+| R3 | 住宿明细与付款证据 | 收据缺住宿日期 | 查预订信息，请本人导出匹配交易 |
+| R4 | 盖章批件，允许纸质另交 | 只有门户预览 | 查官方领取说明 |
+| R5 | 财务前所需部门核算／审核 | 未完成 | 准备中间材料，办理后取得结果 |
 
-The agent does not stop at this table. It follows the next actions.
+## 2. 整理材料
 
-## Collection loop
+1. **注册费：** 搜索找到支付通知和发票链接邮件。核验链接、下载并检查发票，核对金额和抬头；支付通知只在满足 R2 时作佐证，多封邮件不变成多笔费用。
+2. **住宿：** 查到含住宿日期的订单。银行 App 无法访问时只请本人导出 R3 所需的匹配交易，同时继续填已核实字段；收到后核对一致才关闭缺口。
+3. **批件：** 应用户要求打开已核验领取页面，本人完成验证和取件。记录 `user-confirmed-paper`、认可的另交路线及未目视检查，不无故新增上传要求。
+4. **前置部门：** 准备并渲染所需表格，标为中间材料 `draft`；本人返回完成证据后核对 R5，不提前称最终财务就绪。
 
-1. **Registration:** search results include a "payment successful" email and another message containing an invoice link. The agent inspects both, validates the invoice link destination, downloads the existing invoice, and matches its amount and buyer title to the case. The payment notice is counted as supporting evidence only if it meets R2; neither email is a second expense. A link to the same invoice in a later email is deduplicated.
-2. **Lodging:** the agent retrieves a booking statement showing the stay dates. The required payment record is in the user's bank app, which the agent cannot access. It asks the user to export that specific transaction with the fields R3 requires, while filling the form from verified information. When the export arrives, the agent checks the match before closing R3.
-3. **Approval:** the agent opens the verified official collection page at the user's request and identifies the pickup step. The user completes the identity check and collects the stamped paper. The agent records user-confirmed-paper, the permitted delivery route, and that it has not inspected the paper digitally. It does not add a missing-upload blocker when separate paper is allowed.
-4. **Department review:** the agent prepares and renders the form for the preceding office. It labels this an intermediate deliverable, not ready for final finance submission. The user returns the completed review; the agent verifies the required completion before closing R5.
+新材料若抬头错误、缺字段或金额冲突，缺口保持打开，查更正渠道并准备具体请求，获授权才发送。等待开票方时继续独立事项。随后按原模板填表、核对原币金额、导出检查页面并合并，保存页码对应。
 
-If any acquired item has an incorrect title, missing field, or conflicting amount, the corresponding gap stays open. The agent locates the correction route and prepares a specific request; it sends or submits that request only if authorized. Waiting on an issuer does not block unrelated work.
+## 3. 逐条检查
 
-## Assembly and rejection rehearsal
+对实际合集检查 R1—R5，发现住宿付款证明虽在来源目录，却没放进合集，R3 应为 `fail`。将其放入对应位置、重建合集、更新页码并复查受影响条目；最终逐项定位实际 PDF 或认可纸件中的支持证据。
 
-The agent fills the original form, verifies amounts by currency, exports and inspects the summary, and assembles the packet with a page map. It then reviews the combined PDF against R1–R5.
+## 4. 最终交付与共同维护
 
-The first pass finds that the lodging payment proof was saved locally but omitted from the combined PDF. R3 is a fail despite a complete source folder. The agent inserts it beside the lodging evidence, rebuilds the packet, checks the updated page map, and repeats the affected checks. The final review locates each requirement's support in the exact packet or the permitted paper handoff.
+全部适用条目通过后才标为 `ready-for-user-submission`，交付 PDF 和确切纸质办理步骤，明确哪些只依据用户确认；不能写成财务已批准。
 
-Only then does the agent mark the case ready-for-user-submission and return the PDF plus the precise paper delivery steps. Its review states which physical documents were user-confirmed. It does not report that finance has already accepted anything.
+实际递交后，本人报告“首次审核无补件”且注明来源时可记录 `accepted-without-rework`；只说“已交”仍为 `outcome-unknown`。财务要求补正时记 `returned-for-correction` 和确切原因，按要求修正，并把可避免的问题转成虚构回归示例。
 
-## Actual outcome loop
-
-After submission, a user report of "accepted without changes" supports accepted-without-rework. "Submitted" alone leaves outcome-unknown. If finance requests a correction, record returned-for-correction and the exact reason. Repair the case when requested and add a synthetic regression scenario if the cause could have been caught before submission.
-
-For example, "the lodging payment proof existed but was omitted" becomes a permanent packet-level check. A new funding-specific requirement is recorded with its applicability instead of becoming a rule for every traveler.
+例如，“付款证据已取得但漏放合集”对应合集级检查；经费专项的新要求须记录适用范围，不能变成所有申请人的通用要求。

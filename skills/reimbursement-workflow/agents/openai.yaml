@@ -1,4 +1,4 @@
 interface:
-  display_name: "Nanjing University Conference Reimbursement"
-  short_description: "Assist NJU conference travel from OA draft to reimbursement"
-  default_prompt: "Use $reimbursement-workflow for my Nanjing University international computer science conference trip. Start at my current stage, helping with the pre-departure OA draft, itinerary, budget and attachments when needed, then continue through reimbursement preparation and review."
+  display_name: "差旅报销工作流"
+  short_description: "协助南京大学计算机国际会议申请与报销，按规则整理、复核和交付材料"
+  default_prompt: "请使用 $reimbursement-workflow，用中文协助我的南京大学计算机国际会议申请和报销，从当前阶段开始，按适用规则整理材料、逐条检查并完成交付。"

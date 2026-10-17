@@ -1,81 +1,82 @@
-# Review report
+# 复核记录
 
-Case / revision:
-Status:
-Review date:
-Rule version / Git commit (or source version when Git is unavailable):
-Reviewed files and hashes:
-Intended receiving office / submission stage:
-Applicable rules and unresolved source conflicts:
-Actual delivered revision and paper changes:
-Material delivery / office clearance / finance acceptance (separate statuses):
-Inspection limits for user-confirmed paper materials:
+复制到私人材料目录填写。结果按[工作流程](../references/workflow.md)和[复核说明](../references/finance-review.md)判定；源文件中的链接在副本里应改为实际规则位置。未经检查的空白项不是通过。
 
-## Requirement acceptance
+案例／版本：
+材料状态：draft / needs-review / ready-for-user-submission / submitted
+复核日期：
+规则版本／Git 提交（无法取得时记来源版本）：
+已检查文件及哈希：
+接收部门／办理阶段：
+适用规则及未解决来源冲突：
+实际已交版本和纸质变化：
+材料送达／部门核算签章／财务批准（分别记录）：
+仅本人确认纸件的检查限制：
 
-| Requirement ID | Acceptance check | Result | Final packet page(s) / accepted paper reference | Evidence and reason / required repair |
+## 逐条检查
+
+| 规则 ID | 适用性及检查方式 | 结果 | 最终合集页码／认可的纸件引用 | 证据和理由／所需修正 |
 | --- | --- | --- | --- | --- |
 
-Result: pass / fail / pending / not-applicable (with reason).
-Every mandatory requirement must have a supported pass or justified not-applicable result before release. User-confirmed physical material must be identified as such.
+结果：pass / fail / pending / not-applicable。每个候选条目都有结论，不适用有理由；所有适用条目有证据地通过，且没有影响最终交付的未通过或待确认问题，才能标为最终。用户确认纸件明确注明，不能写成已目视检查。
 
-## Content checks
+## 内容检查
 
-Rules and applicability checked:
-Exact invoice title checked:
-Amounts, duplicate expenses, and currency subtotals checked:
-User decisions and intentional blanks preserved:
-Discrepancies and unresolved policy questions:
-Eligibility and required exception approvals checked:
-Corrected invoices, refunds, and effective claimed amounts reconciled:
-Required signatures, stamps, and preceding office reviews completed:
+规则及适用性：
+准确发票抬头：
+金额、费用去重及原币小计：
+最新决定与有意空白：
+差异及未解决政策问题：
+资格和所需例外审批：
+更正／退款及有效申报金额：
+所需签字、盖章及前置部门核算／审核：
 
-## Visual checks
+## 页面检查
 
-Renderer and version:
-Summary page count:
-Pages actually inspected:
-Wrapping, clipping, alignment, and signature space:
-Remaining visual limitations:
+渲染器及版本：
+汇总表页数：
+实际检查的页面：
+换行、裁切、对齐和签字空间：
+剩余视觉检查限制：
 
-## Packet checks
+## 合集检查
 
-Current summary confirmed in combined PDF:
-Packet page count:
-Source-to-packet correspondence and legibility checked:
-Bookmarks, covers, alternate forms, and page manifest match current case:
-Printing groups versus claim totals/counts checked:
-Selected summary versus unselected alternatives confirmed:
-Shared documents checked for unrelated personal data:
-Parser failures, fallbacks, and independently completed checks:
+合集已纳入当前汇总表：
+合集页数：
+来源对应及清晰度：
+目录、书签、封面、备选表及页码清单与当前案例一致：
+打印组与申报金额／附件数分开：
+选中汇总表与未选备选版本：
+共享凭证中的无关个人信息：
+解析失败、替代路径及已独立完成的检查：
 
-| Packet pages (1-based, inclusive) | Evidence ID / summary | Exact source file | Source pages |
+| 合集页码（从 1 开始，含首尾页） | 证据 ID／汇总表 | 准确来源文件 | 来源页码 |
 | --- | --- | --- | --- |
 
-## Separate materials and handoff
+## 另交材料与交接
 
-**Originals to bring (only when required for this case):**
+**应带原件（仅列本案要求的项目）：**
 
-| Document | Requirement source / accepted original form | Needs obtaining / ready to bring / handed in | Holder or handoff confirmation |
+| 文件 | 要求依据／认可的原件形式 | 待取得／已备好待携带／已交 | 保管人或交接确认 |
 | --- | --- | --- | --- |
 
-Show this reminder prominently in user-facing delivery instructions. Copies in the PDF do not replace required originals; do not list confirmed-ready originals as missing.
+在用户交付说明中突出这份提醒。PDF 副本不替代所需原件；确认已备好的不反复列缺件。
 
-Paper materials confirmed by the user (not digitally inspected):
-Office handoff: destination/purpose, materials, remaining handwriting/signatures, question/action, completion evidence:
-Blocking gaps and their evidence basis (observed / user-reported / possible / actual return):
-Optional improvements:
-Artifact links:
-Submission status and source of confirmation:
-First finance review outcome: outcome-unknown
-Outcome source/date:
-Return reason and repair, if any:
+本人确认、未做电子检查的纸件：
+部门交接：目的地／目的、材料、待手写／签字／核算项、具体问题或动作、完成证据：
+阻碍交付的问题及依据（观察／本人报告／可能风险／实际退单）：
+可选改进：
+交付文件链接：
+实际递交状态及确认来源：
+首次财务审核结果：outcome-unknown
+结果来源／日期：
+退单原因及修正（如有）：
 
-## Replay coverage, when requested
+## 副本回放覆盖（仅在要求时填写）
 
-| Stage | Tested-pass / tested-fail / not-exercised | Evidence / blocker |
+| 阶段 | tested-pass / tested-fail / not-exercised | 证据／阻碍 |
 | --- | --- | --- |
 
-Original file hashes and file set unchanged:
-Private logs and artifacts:
-Reusable fixes and synthetic regression scenarios:
+原件哈希及文件集合是否未变：
+私人日志与输出：
+可复用修正及虚构回归场景：

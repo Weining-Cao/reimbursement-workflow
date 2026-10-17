@@ -1,40 +1,42 @@
-# Case record
+# 案例记录
 
-Case ID:
-Status: draft
-Requested deliverables:
-Private case directory:
-Institution: Nanjing University
-Unit and traveler role:
-International computer science conference:
-Trip and funding context:
-Intended receiving office / submission stage:
-Task mode: prepare / audit / replay-on-copies
-Trip stage: planning-OA-draft / approval-pending / approved-pre-departure / traveling / post-trip / submitted
-OA field map, budget, attachments, and status record (if applicable):
-Planned / approved / actual itinerary differences:
+复制到私人材料目录填写。模板链接相对于 Skill 源文件；工作副本应记录实际规则位置和版本。材料状态定义见[工作流程](../references/workflow.md#4-最终交付)，OA 审批和财务结果分别记录。
 
-## Delivered version and physical changes
+案例 ID：
+材料状态：draft
+本次交付要求：
+私人材料目录：
+单位：南京大学
+院系与申请人身份：
+计算机国际会议名称：
+行程与经费情况：
+接收部门／办理阶段：
+任务模式：prepare / audit / replay-on-copies
+行程阶段：planning-OA-draft / approval-pending / approved-pre-departure / traveling / post-trip / submitted
+OA 字段、预算、附件及状态记录（如适用）：
+拟定／获批／实际行程差异：
 
-Electronic revision, if known:
-Delivery channel and recipient stage:
-Paper replacements/additions/removals and confirmation source:
-Physically inspected materials versus user-confirmed materials:
-Material delivery status:
-Office clearance and signature status:
-Actual finance review outcome:
-Replay snapshot and source-hash record, if applicable:
+## 实际递交版本与纸质变化
 
-## Rules and scope
+已知电子版本：
+交付渠道与接收阶段：
+纸质替换／增删及确认来源：
+已检查实物与仅本人确认的材料：
+材料送达状态：
+部门核算与签章状态：
+实际财务审核结果：
+副本回放快照及原件哈希记录（如适用）：
 
-| Requirement ID | Requirement and applicability | Source, section, date/version | Mandatory? | Acceptance check | Evidence IDs | Status |
+## 规则与适用范围
+
+| 规则 ID | 要求与适用性 | 来源、章节、日期／版本 | 是否必需 | 检查方式 | 证据 ID | 结果及理由 |
 | --- | --- | --- | --- | --- | --- | --- |
 
-Status: pass / fail / pending / not-applicable (with reason).
+结果：pass / fail / pending / not-applicable。不适用须有理由；所有适用条目须通过才能最终交付。
 
 ### 南京大学政策适用事实
 
-按 [NJU 场景规则](../references/scenarios/nju-travel-materials.md)从现有证据填写；未知项标注待确认，不要求一次填完全部字段。
+按 [NJU 场景规则](../references/scenarios/nju-travel-materials.md)从证据填写；未知项待确认，不要求一次填完全部字段。
 
 | 判定事实 | 当前结论及证据来源 | 对应规则／待确认问题 |
 | --- | --- | --- |
@@ -50,83 +52,82 @@ Status: pass / fail / pending / not-applicable (with reason).
 | 资助年度／学院／批次、既往同项目资助、本人获批用途及额度 | | NJU-FUND-001、002（如适用） |
 | 报告形式、回国日期、结项期限及导师／秘书审核结果 | | NJU-FUND-002、003（如适用） |
 
-专项事实按[资助场景](../references/scenarios/nju-doctoral-conference-funding-2026.md)核对；没有例外、租车或补助申请等情形可据实记不适用；历史经验 `NJU-PENDING-002` 仅在已确认本次依据时采用。
+专项按[资助场景](../references/scenarios/nju-doctoral-conference-funding-2026.md)核对；无租车、例外或补助申请等情形可据实记不适用。历史经验 `NJU-PENDING-002` 仅在已确认本次依据时采用。
 
-Required invoice title (verbatim):
-Airfare booking channel / agency, if applicable:
-Agency-issued airfare invoice requirement, evidence ID, and delivery status:
-Finance-only fields to leave blank:
-Page/format requirements, if any:
+发票抬头要求（准确原文）：
+机票订票渠道／旅行社（如适用）：
+旅行社发票要求、证据 ID 和交付状态：
+须留给财务填写的字段：
+页数／格式要求（如有）：
 
-## Connections and scope
+## 工具与权限
 
-Available browser/search tools:
-Authorized mailbox alias, scope, and access method (no secrets):
-Available document editor/renderer/merger:
-User-only steps or unavailable capabilities:
-Existing authorization for external actions, if any:
-Applicant-only actions / teacher-handled submission route and source:
+可用浏览器／搜索工具：
+已授权邮箱别名、范围和读取方式（不含秘密）：
+可用文档编辑器／渲染器／合并工具：
+本人才能完成的动作及缺失能力：
+已获授权的外部动作（如有）：
+学生 OA 本人提交、财务交老师办理的具体路线：
 
-## Collection queue
+## 收集队列
 
-| Requirement ID / gap | Verified acquisition route | Next concrete action | Owner | State | Acceptance result / evidence ID |
+| 规则 ID／缺口 | 已核验的获取渠道 | 具体下一步 | 负责人 | 状态 | 验收结果／证据 ID |
 | --- | --- | --- | --- | --- | --- |
 
-State: open / in-progress / waiting-for-user / waiting-for-issuer / resolved.
-Resolve only after the acquired evidence passes its acceptance check.
+状态：open / in-progress / waiting-for-user / waiting-for-issuer / resolved。材料通过验收后才标为 resolved。
 
-## Current files
+## 当前文件
 
-Original template and SHA-256:
-Latest saved user form and SHA-256:
-Selected working form:
-Current edit mode: refill-original-template / minimally-edit-current-form
-Current rendered summary:
-Current combined packet and page manifest:
+原始模板及 SHA-256：
+最新保存的用户表格及 SHA-256：
+选中的工作表格：
+编辑模式：refill-original-template / minimally-edit-current-form
+当前汇总表 PDF：
+当前合集及页码清单：
 
-## Evidence inventory
+## 凭证清单
 
-| ID | Document type / medium | Path / original provenance / page | Required submission form and source | Original holder/location and handoff status, if required | Delivery status | Inspection result |
+| ID | 类型／介质 | 路径／原始来源／页码 | 所需递交形式及依据 | 所需原件保管人／位置／交接 | 获取与检查状态 | 检查结论 |
 | --- | --- | --- | --- | --- | --- | --- |
 
-Delivery status: inspected-digital / user-confirmed-paper / expected / missing / not-applicable.
+获取与检查状态：inspected-digital（已检查电子材料）/ user-confirmed-paper（本人确认纸件）/ expected（预期取得）/ missing（缺失）/ not-applicable（不适用）。另记实际交付情况，不以已检查代替已送达。
 
-## Printing and claim scope
+## 打印与申报范围
 
-| Document / selected revision | Claim or separate handoff group | Include in claim totals/count? Basis | Print location or separate packet | Third-party data / permitted delivery check |
+| 文件／选中版本 | 报销组或单独交接组 | 是否计金额／附件数及依据 | 打印位置或单独材料包 | 第三方信息与交付许可检查 |
 | --- | --- | --- | --- | --- |
 
-Unselected alternatives and selection confirmation:
+未选备选版本及最终选择依据：
 
-## Confirmed decisions
+## 已确认决定
 
-| Field / attachment scope / layout | Current value or intentional blank | User confirmation | Superseded decision / affected outputs | Evidence difference / policy issue |
+| 字段／附件范围／版式 | 最新值或有意空白 | 本人确认依据 | 被替代决定／受影响输出 | 凭证差异／政策问题 |
 | --- | --- | --- | --- | --- |
 
-## Open issues
+## 未解决问题
 
-| Issue | Basis: observed defect / user-reported gap / possible risk / actual office return | Blocking which stage? Why? | Required next action | Owner |
+| 问题 ID | 依据：观察缺陷／本人报告／可能风险／实际退单 | 阻碍阶段及原因 | 所需下一步 | 负责人 |
 | --- | --- | --- | --- | --- |
 
-## Office decisions and completion evidence
+## 部门回复与完成证据
 
-| Issue ID / requirement or expense | Stage blocked | Precise question / completion check | Office response or completed action; date and source | Conditions / affected artifacts | State / remaining check |
+| 问题 ID／规则或费用 | 阻碍阶段 | 精确问题／验收条件 | 部门回复或完成动作、日期与来源 | 附带条件／受影响文件 | 状态／待检查项 |
 | --- | --- | --- | --- | --- | --- |
 
-Keep unresolved rows when only part of an office visit is complete. Identify user-reported paper completion separately from inspected evidence; record the basis before closing a row.
+只完成部分办事事项时保留其他未解决行。用户报告纸质完成与已检查的证据分开记录，有依据才关闭问题。
 
-## Next office visit or teacher handoff
+## 下一次部门办理或老师交接
 
-Office / purpose / verified location, if known:
-Files and originals to carry:
-Handwritten descriptions, signatures, and office-only fields remaining:
-Precise question or requested action:
-Completion evidence to bring back:
+部门／目的／已核验地点（如已知）：
+应带文件和原件：
+待手写说明、签字及部门专填栏：
+具体问题或所需动作：
+回来提供的完成证据：
 
-## Last handoff
+## 最近交接
 
-Revision and date:
-Review report:
-Submission confirmation, if any:
-First finance review outcome: outcome-unknown
-Outcome source/date and exact return reason, if any:
+版本与日期：
+复核报告：
+实际递交确认（如有）：
+首次财务审核结果：outcome-unknown
+结果来源／日期及确切退单原因（如有）：

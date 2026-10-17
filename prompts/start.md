@@ -1,47 +1,31 @@
-# Starter prompt
+# 启动提示
 
-Use this after making the workflow available through a local Skill folder or the share package's `START_CHAT.txt`. Fill only what you know. You may omit every optional field; a short institution/role/trip description is enough to begin intake.
+先提供本地 Skill 文件夹或 `START_CHAT.txt`。只填写已知信息，未知项写“不清楚”；简短的身份、行程和阶段描述即可开始，不必填完下面所有字段。
 
 ```text
-Follow the supplied workflow to prepare Nanjing University reimbursement for
-attendance at an international computer science conference, starting with the
-pre-departure OA application if needed and continuing through finance review.
-Use the workflow from the supplied local SKILL.md (resolving references relative
-to that skill folder), or the included sections of START_CHAT.txt. If neither
-is available, tell me the missing workflow location instead of assuming it is
-installed. Keep my case files separate from the workflow package.
+请按提供的差旅报销工作流，用中文协助我办理南京大学计算机国际会议申请和报销。
+读取本地 SKILL.md 及其相对路径引用，或 START_CHAT.txt 中已包含的来源区段；
+若两者都不可用，请说明缺少的工作流位置，不假定已安装。
+工作记录和生成文件保存在我的私人材料目录，与工作流源文件分开。
 
-Institution: Nanjing University
-Unit and traveler role: [known context or unknown]
-International computer science conference: [name or unknown]
-Current stage: [planning/OA draft / awaiting approval / approved / traveling / post-trip / submitted]
-Trip, dates, destination, and funding program: [known context or unknown]
-Available files: [location or none yet]
-Rules and original template, if already available: [location or unknown]
-Latest user-edited Word file, if any: [location or none yet]
-Available browser/mailbox connections: [known connections or discover]
-Requested result: [OA field draft and budget / help fill OA / complete reimbursement preparation / collect missing items / review packet]
-Known paper-only materials: [list or unknown]
-Confirmed preferences and changes: [list or none]
+院系和学生／教职工身份：……
+会议、出行日期、地点和经费来源：……
+当前阶段：拟出访／OA 草稿、审批中、已获批、旅途中、回国后或已递交
+已有材料及位置：……
+最新手工修改的 Word、已有规则或模板（如有）：……
+已授权的邮箱／浏览器、所需原件及已交材料（如有）：……
+本次希望完成的内容及要保留的修改：……
 
-Inspect available materials and find the applicable official requirements.
-If I am applying before departure, prepare the OA field map, proposed itinerary,
-estimated budget and attachment list first. Keep estimates separate from actual
-expenses and leave unknown facts unresolved. Help with the visible portal only
-when the required tools and access are available. Preparing a draft does not
-authorize final submission; present the concrete application before that action
-unless I have already authorized it. Do not restart an already approved case.
-Identify missing items and actively help obtain them using available websites,
-authorized mailbox access, and local files. Guide me through user-only steps
-such as login, signatures, or paper pickup. Reuse permissions already granted;
-ask for any missing authorization before account access or external actions.
-Ask concise, actionable questions and continue independent work while waiting.
+按“适用规则 → 整理材料 → 逐条检查 → 最终交付”从当前阶段继续。
+先检查现有材料，再核对适用要求，主动获取能取得的缺件；不要重启已获批的申请。
+行前先整理 OA 字段、完整行程、估算预算和附件，预算与实付分开，未知项不编造。
+可在授权范围内填写和上传；学生 OA 由我本人点击提交，财务报销交老师办理。
+登录、签字、盖章和领取原件等需要本人完成时，说明具体下一步。
 
-Validate newly obtained materials before closing each gap. Preserve my confirmed
-choices and intentional blanks in drafts, but flag and resolve material conflicts
-with finance requirements before calling the packet ready. Fill the original
-template, render and inspect it, assemble the final PDF, then review the exact
-packet against every applicable mandatory requirement and repair defects.
-Return the artifacts, the review result, and any concrete remaining blockers.
-Do not claim actual finance acceptance before receiving that outcome.
+沿用已获授权范围，不重复索权；没有权限的外部操作先准备具体内容供核对。
+保留最新确认内容和有意空白；与财务要求冲突的选择保留在草稿中并明确待确认，
+不能以个人选择代替报销资格。补件要核对内容，不能只看下载成功。
+按原模板填表、导出并检查页面，合并当前材料，再逐条核对实际 PDF 和另交材料。
+修正后复查；全部适用条目通过后才交最终文件，否则明确草稿状态及具体阻碍。
+返回文件、复核结论和必要待办；可交付、已递交和财务通过分别记录。
 ```

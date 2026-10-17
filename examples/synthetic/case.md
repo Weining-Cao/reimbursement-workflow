@@ -1,37 +1,37 @@
-# Synthetic case record
+# 虚构案例记录
 
-Case ID: example-workshop-2030
-Status: needs-review
-Requested deliverables: original-template form, summary PDF, combined packet.
+案例 ID：example-workshop-2030
+材料状态：needs-review
+最终希望取得：按原模板填写的表格、汇总表 PDF 和合集；当前示例只检查文本。
 
-## Supplied fictional requirements
+## 给定的虚构要求
 
-Source: fictional user brief, version 1. These are example requirements only.
+来源：虚构用户说明，版本 1，仅用于本示例，不代表南京大学制度。
 
-- Invoice title: Example University.
-- Finance staff fill exchange rate, converted total, and allowance fields.
-- Approval paper may be handed in separately, per the fictional user brief.
-- No rule is supplied about the travel-date boundary or mandatory page count.
+- 发票抬头：Example University。
+- 汇率、折算总额和补助由财务填写。
+- 任务批件允许纸质另交。
+- 未提供行程日期边界或固定页数要求。
 
-## Confirmed decisions
+## 已确认决定
 
-| Field | Confirmed value | Evidence difference / next action |
+| 字段 | 确认值 | 证据差异／下一步 |
 | --- | --- | --- |
-| Travel period | June 3–7, 2030; five days | Return evidence says June 8; retain discrepancy for institutional interpretation |
-| Route | Harbor City → Capital City → Lake City → Capital City → Harbor City | Omit flight numbers in the summary only |
-| Funding code | Intentionally blank | Do not restore a previously entered value |
-| Signatures | More handwriting space above and below | Verify after rendering |
+| 行程期间 | 2030 年 6 月 3—7 日，共五天 | 返程证据为 6 月 8 日；保留差异并确认适用解释 |
+| 路线 | Harbor City → Capital City → Lake City → Capital City → Harbor City | 仅在汇总表省略航班号，原证据保留 |
+| 经费代码 | 有意留空 | 不恢复旧值 |
+| 签字区 | 上下签字位置增加手写空间 | 实际渲染后检查 |
 
-## Evidence
+## 凭证
 
-| ID | Item | Delivery status | Source |
+| ID | 材料 | 获取与检查状态 | 来源 |
 | --- | --- | --- | --- |
-| E1 | Ticket invoice, USD 120.00 | inspected-digital (synthetic text only) | evidence.txt, E1 |
-| E2 | Payment confirmation for E1 | inspected-digital (synthetic text only) | evidence.txt, E2 |
-| E3 | Rail receipt, USD 25.50 | inspected-digital (synthetic text only) | evidence.txt, E3 |
-| E4 | Lodging receipt, EUR 64.20 | inspected-digital (synthetic text only) | evidence.txt, E4 |
-| E5 | Stamped approval | user-confirmed-paper | Fictional user says ready; separate handoff; not inspected |
+| E1 | 机票发票，USD 120.00 | inspected-digital（仅虚构文本） | evidence.txt，E1 |
+| E2 | E1 对应支付确认 | inspected-digital（仅虚构文本） | evidence.txt，E2 |
+| E3 | 火车收据，USD 25.50 | inspected-digital（仅虚构文本） | evidence.txt，E3 |
+| E4 | 住宿收据，EUR 64.20 | inspected-digital（仅虚构文本） | evidence.txt，E4 |
+| E5 | 盖章任务批件 | user-confirmed-paper | 虚构用户报告已备好、纸质另交；未检查 |
 
-## Gaps
+## 剩余问题
 
-No Word template or rendered documents supplied in this text fixture. Visual review and PDF assembly remain incomplete. The date interpretation is unresolved; do not mark the packet ready.
+没有提供 Word 模板或渲染文档，视觉复核和 PDF 合并未完成。日期解释未解决，不得标为最终交付就绪。

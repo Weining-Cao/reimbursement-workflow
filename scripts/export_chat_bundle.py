@@ -31,21 +31,18 @@ SOURCES = (
 
 def export(root, destination):
     sections = [
-        "NANJING UNIVERSITY INTERNATIONAL COMPUTER SCIENCE CONFERENCE REIMBURSEMENT — CHAT EDITION\n\n"
-        "Attach this file or paste its full contents into your agent, then describe "
-        "your Nanjing University unit, traveler role, conference trip, and available materials. Unknown "
-        "details can be discovered during intake. No installation is required.\n\n"
-        "This file is generated from the maintained public sources listed below. "
-        "It contains instructions, empty working templates, and an optional "
-        "freshness script; it contains no claimant evidence and is not an official policy publication.\n\n"
-        "For the agent: begin with the starter prompt and canonical workflow. "
-        "Relative links refer to included SOURCE sections, resolved from the "
-        "referencing source's directory; read those sections within this attachment "
-        "rather than requesting separate files. The script section is source code, "
-        "not an installed executable or evidence that it ran. Use only capabilities "
-        "actually available in this chat. Missing filesystem, browser, mail, or "
-        "rendering access must not be reported as completed actions.\n\n"
-        "CONTENTS\n" + "\n".join(str(path) for path in SOURCES)
+        "差旅报销工作流 — 聊天版\n\n"
+        "面向南京大学计算机国际会议申请和报销。上传本文件或粘贴全文，再说明院系、身份、"
+        "行程、经费、当前阶段和已有材料；未知项可注明不清楚，无需安装软件。\n\n"
+        "按适用规则、整理材料、逐条检查、最终交付推进，未通过项修正后复查。"
+        "学生 OA 由本人点击提交，财务报销交经办老师办理；材料就绪不等于财务批准。\n\n"
+        "本文件由下列公共源文件生成，包含说明、空白模板和可选文件校验脚本，"
+        "不含真实申请人材料，也不是学校制度发布文件。\n\n"
+        "给 agent：从启动提示和执行流程开始，用中文沟通。相对链接按引用源文件所在目录"
+        "解析至本附件的 SOURCE 区段，不重复索取已包含的文件。模板复制到私人目录后，"
+        "工作记录引用实际规则位置和版本。脚本区段是源码，不代表已安装或已经执行。"
+        "仅使用本次实际可用能力，不虚称完成文件写入、浏览器、邮箱或渲染操作。\n\n"
+        "来源目录\n" + "\n".join(str(path) for path in SOURCES)
     ]
     for relative in SOURCES:
         source = root / relative

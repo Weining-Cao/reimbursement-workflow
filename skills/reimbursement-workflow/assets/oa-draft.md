@@ -1,51 +1,53 @@
-# Pre-departure OA application draft
+# 行前 OA 申请草稿
 
-Case ID:
-Current trip stage:
-Official guidance URL / checked date / applicable role:
-Verified portal entry and application type:
-Form inspected through: authenticated page / user-supplied fields / not yet inspected
-Application identifier and status, if any (private):
-Browser capabilities and authorized actions:
+复制到私人材料目录填写。**学生 OA 只能由申请人本人点击提交**；agent 可在授权范围内填写和上传，填写、提交及获批分别记录。字段按实际页面确认，不套用其他申请人的表格。
 
-## Field map
+案例 ID：
+当前行程阶段：
+官方指南网址／核验日期／适用身份：
+已核验入口与申请类型：
+表单检查方式：已登录页面／本人提供的字段／尚未检查
+申请编号及状态（私有）：draft / submitted / returned / approved / unknown
+浏览器能力及获准填写／上传范围：
 
-| Actual OA field label | Proposed value / intentional blank | Source document/page or user confirmation | Confirmed / estimated / unresolved | Required correction or question |
+## 字段映射
+
+| 实际 OA 标签 | 拟填值／有意空白 | 来源文件／页码或本人确认 | 已确认／估算／未解决 | 所需修正或问题 |
 | --- | --- | --- | --- | --- |
 
-## Proposed itinerary
+## 拟定行程
 
-Conference dates:
-Outbound / return travel dates:
-Full route, including any transit-only stops:
-Destination/date evidence:
-Day-count basis and unresolved interpretation:
-Difference from an existing approved itinerary, if any:
+会议日期：
+出发／返回日期：
+完整路线（含仅中转的停留）：
+地点与日期依据：
+计日依据及待确认解释：
+与已有获批行程的差异（如有）：
 
-## Estimated budget — not incurred expenses
+## 估算预算（不等于实际支出）
 
-| Expense | Currency | Quantity / unit | Unit price | Estimated subtotal | Quote or estimate source/date | Funding basis / unresolved assumption |
+| 费用 | 币种 | 数量／单位 | 单价 | 估算小计 | 报价或估算来源／日期 | 经费依据／待确认假设 |
 | --- | --- | --- | --- | --- | --- | --- |
 
-Native-currency subtotals:
-Proposed conversion basis, if the form requires one:
-Applicable cap / exception source, if relevant:
-Unconfirmed prices or funding:
+原币小计：
+页面需要时的拟用换算依据：
+适用限额／例外依据（如有）：
+未确认价格或经费：
 
-## Attachments
+## 附件
 
-| Required attachment / source of requirement | Private file / evidence ID | Verified contents | Ready / missing / needs correction |
+| 所需附件及依据 | 私人文件／证据 ID | 已核对内容 | 已备好／缺失／需修正 |
 | --- | --- | --- | --- |
 
-## Review and handoff
+## 核对与本人提交
 
-Draft revision and review date:
-User-only remaining steps:
-Mandatory gaps before submission:
-Specific submission authorization, if provided:
-Actions actually performed and observed results:
-Submission receipt/status evidence:
-Approval or return decision and source:
-Approved itinerary / duration / funding reference:
-Required formal approval original: needs obtaining / ready to bring / handed in
-Next action and owner:
+草稿版本及检查日期：
+须本人完成的剩余动作：
+提交前必需的缺口：
+agent 实际填写／上传内容及观察结果：
+申请人核对情况及本人提交确认（如有）：
+提交回执／状态证据：
+批准／退回决定及来源：
+获批行程／时长／经费依据：
+所需正式批件原件：待取得／已备好待携带／已交
+下一步及负责人：

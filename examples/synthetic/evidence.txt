@@ -1,14 +1,14 @@
-SYNTHETIC EVIDENCE DESCRIPTIONS ONLY
+仅为虚构凭证描述
 
-E1: Ticket invoice. Title: Example University. Amount: USD 120.00.
-Outbound date: 2030-06-03. Return arrival: 2030-06-08.
-Route: Harbor City / Capital City / Lake City / Capital City / Harbor City.
+E1：机票发票。抬头：Example University。金额：USD 120.00。
+出发日期：2030-06-03。返程抵达：2030-06-08。
+路线：Harbor City / Capital City / Lake City / Capital City / Harbor City。
 
-E2: Payment confirmation for the same E1 ticket. USD 120.00.
-This is supporting evidence, not an additional purchase.
+E2：同一张 E1 机票的付款确认，USD 120.00。
+这是佐证，不是额外购买。
 
-E3: Rail receipt. Service date: 2030-06-08. Amount: USD 25.50.
+E3：火车收据。服务日期：2030-06-08。金额：USD 25.50。
 
-E4: Lodging receipt. Checkout: 2030-06-07. Amount: EUR 64.20.
+E4：住宿收据。退房日期：2030-06-07。金额：EUR 64.20。
 
-E5 has no digital evidence. The fictional user reports the paper is ready.
+E5 没有电子证据；虚构用户报告纸质批件已备好。

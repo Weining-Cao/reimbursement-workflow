@@ -1,16 +1,16 @@
-# Replay a private case without changing submitted materials
+# 在副本上复核已有案例
 
-Use this procedure when the user asks to test or improve the workflow using an existing claim. Keep real evidence and raw execution logs private; publish only synthetic reproductions and general lessons.
+仅在用户要求用已有申报测试或改进流程时使用。真实材料、执行日志和回放输出保持私有，对外只发布虚构复现和通用经验；不因回放改动已提交材料。
 
-1. Establish whether the task is an audit, a replay on copies, or an actual correction. Respect the user's scope. Record which electronic revision was handed in and whether paper pages were replaced, added, signed, or removed. Distinguish user-confirmed changes from inspected files.
-2. Inventory relevant source files, sizes, and SHA-256 hashes. Make an unchanged private snapshot and a separate working copy. Exclude secrets, mailbox caches, and repository history from copying unless needed and authorized. Do not publish the snapshot.
-3. Discover actual tool availability and versions. Inspect any legacy scripts before executing them: resolve their input/output roots, hardcoded totals, dependent builders, and side effects. Point every generated artifact and download into the replay directory. Do not execute an in-place builder against the submitted directory.
-4. Exercise authorized acquisition paths rather than only documenting them. A known archived invoice can test attachment retrieval and a second invoice can test an email download link. Match retrieved bytes/content to the existing evidence. Record this as targeted retrieval, not a comprehensive mailbox search. Test a broader search only when needed to locate a genuine unresolved item.
-5. Recheck official rules and templates. If a browser cannot download a supported file type, use an authorized direct download and inspect the actual file. If a web print appears to miss required content, preserve a diagnostic capture, try search-only Unicode/whitespace normalization, and inspect it visually; static HTML or another installed renderer may provide a fallback. Do not pass a blank/login/error page as evidence. Report unavailable interactive-login capability separately from successful public-page access.
-6. Extract and render source documents with per-page error handling. Compare the saved packet to current sources, but continue after discrepancies. Re-render the current saved Word copy, then separately test any template-refill/build scripts. Preserve both results so a change in merges or layout cannot be mistaken for the user's handed-in version.
-7. Check generated output content and navigation against the current case. An exit code of zero proves only execution success. A legacy checker may fail correctly on stale content, or incorrectly because its own expected totals are obsolete; record the distinction.
-8. Complete the requirement matrix and record each stage as tested-pass, tested-fail, or not-exercised with a reason. Physical signatures, identity checks, unavailable paper documents, and an actual finance decision cannot be simulated into a pass. Separate confirmed defects, conditional review risks, user-confirmed completion, and uninspected facts.
-9. Fix the reusable workflow and add synthetic regression scenarios. Re-run the affected check on the private copy or a controlled fixture. If a defect requires external interpretation, document the exact question and leave it unresolved; do not invent acceptance to complete the test.
-10. Recompute the source hashes and compare file sets. Report any concurrent changes instead of overwriting them. Keep the detailed case report private, verify the public diff contains no case data, and build sharing archives only from reviewed tracked public files.
+1. 确认本次是审计、副本回放还是实际修正。记录已交电子版本及纸质替换、增删、签字，区分本人确认与已检查事实。
+2. 列出相关文件、大小和 SHA-256，建立不变的私人快照及独立工作副本；无必要且未授权时不复制秘密、邮箱缓存或 Git 历史，不发布快照。
+3. 发现实际工具和版本；运行旧脚本前核对输入输出根目录、硬编码金额、依赖构建器及副作用。下载和生成物全部进入回放目录，不对已提交目录运行原位构建。
+4. 实际执行获授权的取件路径，不只写说明。可用已知存档票据测试附件／链接获取并核对字节或内容，注明定向获取，不声称全面邮箱搜索；只有真实未解决缺口才扩展搜索。
+5. 复核官方规则和模板。网页工具不支持下载时尝试授权直接下载并检查文件；网页打印缺文字时保留诊断副本，做仅用于搜索的 Unicode／空白归一化并目视检查，必要时用已有静态 HTML 或渲染器。空白、登录或错误页不能算证据；公开页面可用不表示能交互登录。
+6. 按文件／页隔离提取和渲染错误。对比旧合集和当前来源，发现差异后继续独立检查；先渲染当前保存的 Word 副本，再独立测试原模板重填／构建脚本，保留两者，避免把新合并结构或版式当作实际已交版。
+7. 核对生成内容、目录和书签；退出码为零只证明执行成功。旧检查器可能正确发现过期内容，也可能因预期金额过时误报，须区分记录。
+8. 完成规则矩阵，每个实测阶段记 `tested-pass`、`tested-fail` 或 `not-exercised` 及原因。身份验证、实物签章、未见纸件和财务决定不能模拟为通过；区分确切缺陷、条件性风险、用户确认完成和未检查事实。
+9. 只根据发现修正可复用流程和虚构回归示例，在私人副本或受控样例中重跑受影响检查。需要外部解释时保留具体问题，不为完成测试编造批准。
+10. 重算原件哈希并核对文件集合；遇到并发变化只报告，不覆盖。详细案例报告留私有，公共差异不得包含个人数据；分享包只从审查过的跟踪文件生成。
 
-Report how far the real replay ran. A workflow can be exercised through collection, rendering, assembly, and preflight while the case remains waiting for an office visit. This is not a successful reimbursement outcome and must not enter the accepted-without-rework count.
+按[工作流程](workflow.md)返回实际覆盖范围。即使收集、渲染、合并和预检跑通，仍可能等部门办理；回放成功不是报销成功，不计入 `accepted-without-rework`。

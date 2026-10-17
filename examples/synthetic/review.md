@@ -1,11 +1,11 @@
-# Synthetic review
+# 虚构案例复核
 
-Status: needs-review.
+材料状态：needs-review。
 
-Checked the text fixture: E1 and E2 support one expense; subtotals are USD 145.50 and EUR 64.20. The funding and finance-only fields remain blank. The chosen date text and city-only route are preserved.
+已检查文本：E1 和 E2 对应一笔费用，原币小计 USD 145.50、EUR 64.20。经费和财务专填栏保持空白，所选日期文字和仅城市路线保留。
 
-Unresolved: return arrival and rail service fall on June 8, after the chosen June 7 end date. No policy resolving that difference is supplied. Do not invent an eligibility finding.
+未解决：返程抵达和火车服务发生于 6 月 8 日，晚于表格所选 6 月 7 日结束日期。未给出解释该差异的规则，不编造费用资格结论。
 
-Separate materials: E5 is user-confirmed paper for separate submission, not digitally inspected. It is not missing from an expected digital packet under this fictional brief.
+另交材料：E5 为本人确认的纸件，按虚构说明允许另交，未经电子检查；不能将其列为合集缺页，也不能声称已检查原件。
 
-Not performed: Word editing, visual inspection, PDF export, merging, page correspondence, or submission. No real template or PDF exists in this fixture. The hash demo does not change this status.
+未执行：Word 编辑、视觉检查、PDF 导出、合并、页码核对或实际递交。本示例没有真实模板或 PDF，哈希演示不改变这些状态。
