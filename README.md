@@ -2,7 +2,7 @@
 
 帮助参会同学和 AI 助手从 OA 申请、材料收集走到汇总表填写与 PDF 复核。材料不齐也可以开始，按当前办理阶段继续推进。
 
-![南京大学计算机国际会议报销流程图：OA 申请、材料收集、费用核对、文档制作与提交复核](docs/assets/reimbursement-workflow.png)
+![差旅报销工作流：适用规则、整理材料、逐条检查、最终交付；修正复查与共同维护规则](docs/assets/reimbursement-workflow.png)
 
 ## 开始使用
 
