@@ -15,3 +15,6 @@ __pycache__/
 *.jpeg
 *.zip
 START_CHAT-*.txt
+
+# Reviewed documentation artwork only; claim images remain ignored.
+!docs/assets/reimbursement-workflow.png

@@ -2,6 +2,8 @@
 
 帮助参会同学和 AI 助手从 OA 申请、材料收集走到汇总表填写与 PDF 复核。材料不齐也可以开始，按当前办理阶段继续推进。
 
+![南京大学计算机国际会议报销流程图：OA 申请、材料收集、费用核对、文档制作与提交复核](docs/assets/reimbursement-workflow.png)
+
 ## 开始使用
 
 1. 下载 [START_CHAT.txt](START_CHAT.txt)，上传到你使用的 AI 助手，或粘贴完整内容。
